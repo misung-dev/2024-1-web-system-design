@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>류미성 | 동아리 가입 양식</title>
+	</head>
+	<body>
+		<h2>[동아리 가입 양식]</h2>
+		<p>* 빠짐없이 작성해주시기 바랍니다.</p>
+		<div>
+			<form action="/action_page.php">
+				<label for="name">이름</label>
+				<input type="text" id="name" name="name" /><br /><br />
+				<label for="major">학부/학과</label>
+				<select name="major" id="major">
+					<option value="none">===선택===</option>
+					<option value="software">소프트웨어학부</option>
+					<option value="business-administration">경영학부</option>
+					<option value="statistics">통계학과</option>
+					<option value="mathematics">수학과</option></select
+				><br /><br />
+				<label for="grade">학년</label>
+				<input type="radio" id="1st" name="grade" value="first" />
+				<label for="">1학년</label>
+				<input type="radio" id="2nd" name="grade" value="second" />
+				<label for="">2학년</label>
+				<input type="radio" id="3rd" name="grade" value="third" />
+				<label for="">3학년</label>
+				<input type="radio" id="4th" name="grade" value="fourth" />
+				<label for="">4학년</label>
+				<br /><br />
+				<label for="student-id">학번</label>
+				<input type="text" id="student-id" name="student-id" /><br /><br />
+				<label for="email">이메일</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="email@sookmyung.ac.kr"
+				/><br /><br />
+				<label for="phone-number">전화번호</label>
+				<input
+					type="text"
+					id="phone-number"
+					name="phone-number"
+					placeholder="010-1234-5678"
+				/><br /><br />
+				<label for="motivation">가입 동기</label>
+				<textarea name="motivation" id="motivation" cols="30" rows="4"></textarea>
+				<br /><br />
+				<input type="submit" value="가입하기" />
+				<input type="reset" value="취소하기" />
+			</form>
+		</div>
+	</body>
+</html>

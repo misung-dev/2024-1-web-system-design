@@ -1,0 +1,159 @@
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.main-container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+/* 헤더 */
+#top_header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #bfd8bd;
+	padding: 20px;
+	height: 140px;
+}
+
+header #title h1 {
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+header #title p {
+	font-size: 20px;
+}
+
+header nav #navi {
+	font-size: 20px;
+}
+
+header #top_header nav ul li {
+	list-style: none;
+}
+
+#navi {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-list-item {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	max-width: 160px;
+	padding: 4px;
+}
+.nav-list-item:hover {
+	background-color: #fff;
+}
+
+.nav-list-item:hover .nav-sub-list {
+	display: block;
+}
+
+.nav-sub-list {
+	display: none;
+	position: absolute;
+	bottom: -76px;
+}
+
+.nav-sub-list > .nav-sub-list-item {
+	display: flex;
+	justify-content: center;
+	padding: 8px 12px;
+	background-color: aquamarine;
+}
+
+/* 콘텐츠 */
+.container {
+	display: flex;
+	margin: 10px 0;
+	gap: 10px;
+}
+
+.container #login {
+	background-color: #f0e0c9;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid gray;
+}
+
+.container #login form {
+	line-height: 120%;
+}
+
+.container #login form input {
+	margin-bottom: 10px;
+}
+
+.card-content {
+	gap: 10px;
+}
+
+.card > header > h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.card {
+	background-color: #f4eeee;
+	border: 2px solid gray;
+	margin-bottom: 4px;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.card-content {
+	display: flex;
+}
+
+.card-img > img {
+	height: 150px;
+	width: 150px;
+}
+
+/* 사이드 광고 */
+#ad > article {
+	background-color: #f9dddd;
+	border: 1px solid #3f3f46;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 2px 2px gray;
+}
+#ad > article > p {
+	line-height: 150%;
+}
+#ad > article > p > span {
+	font-weight: bold;
+}
+
+/* 푸터 */
+#foot {
+	background-color: #fbd6ac;
+}
+
+#foot > ul {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-weight: 600;
+}
+
+#foot > ul > li {
+	padding: 10px;
+}
+
+#foot > ul > li > a:hover {
+	color: #006f49;
+}
