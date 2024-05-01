@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>류미성 | 카운트다운 타이머</title>
+		<style>
+			#demo {
+				color: #2196f3;
+				font-size: 32px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo"></div>
+	</body>
+	<script>
+		function countdownTimer(seconds) {
+			let msgElement = document.getElementById("demo");
+			const timer = setInterval(() => {
+				if (seconds > 0) {
+					msgElement.innerHTML = seconds;
+					seconds--;
+				} else {
+					clearInterval(timer);
+					msgElement.innerHTML = "타이머 종료";
+				}
+			}, 1000);
+		}
+
+		let count = prompt("카운트다운할 숫자를 입력하세요.");
+		countdownTimer(count);
+	</script>
+</html>

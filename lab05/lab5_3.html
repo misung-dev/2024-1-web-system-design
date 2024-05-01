@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>류미성 | 비만도 계산</title>
+	</head>
+	<body>
+		<h1 id="result"></h1>
+	</body>
+	<script>
+		let name = prompt("이름을 입력하시오");
+		let age = prompt("나이를 입력하시오(숫자)");
+		let height = prompt("키를 입력하시오(숫자)");
+		let weight = prompt("체중을 입력하시오(숫자)");
+		let bmi = weight / (height * 0.01) ** 2;
+		let status;
+
+		// 20대 비만도 계산
+		if (age >= 20 && age < 30) {
+			if (bmi <= 17.9) {
+				status = "저체중";
+			} else if (bmi <= 23) {
+				status = "표준체중";
+			} else if (bmi <= 30) {
+				status = "과체중";
+			} else {
+				status = "비만";
+			}
+		}
+
+		// 30대 비만도 계산
+		if (age >= 30 && age < 40) {
+			if (bmi <= 18.4) {
+				status = "저체중";
+			} else if (bmi <= 24) {
+				status = "표준체중";
+			} else if (bmi <= 30) {
+				status = "과체중";
+			} else {
+				status = "비만";
+			}
+		}
+
+		let resultElement = document.getElementById("result");
+		resultElement.innerHTML = `
+		이름: ${name} <br/>
+		나이: ${age} <br/>
+		키: ${height} <br/>
+		체중: ${weight} <br/>
+		당신은 ${status}(${bmi})입니다.
+		`;
+	</script>
+</html>
