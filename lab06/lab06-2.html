@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>류미성 | 로또 번호 생성하기</title>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100vh;
+				margin: 0 auto;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 300px;
+				padding: 10px;
+				margin: 30px;
+				border-radius: 10px;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+				background-color: rgb(251, 217, 213);
+				text-align: center;
+			}
+			.lottery {
+				padding: 10px;
+			}
+			.close {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>로또 번호 생성결과</h2>
+			<div class="lottery">
+				<button class="lottery-btn" onClick="changeNum()">로또 번호 생성하기</button>
+			</div>
+			<p class="lotteryNum"></p>
+			<div class="close">
+				<button class="close-btn" onclick="closePopup()">닫기</button>
+			</div>
+		</div>
+
+		<script>
+			const lotteryNum = document.querySelector(".lotteryNum");
+
+			function changeNum() {
+				let numArr = [];
+				while (numArr.length < 6) {
+					let num = Math.floor(Math.random() * 45) + 1;
+					if (!numArr.includes(num)) {
+						numArr.push(num);
+					}
+				}
+				lotteryNum.innerHTML = numArr.join(", ");
+			}
+
+			function closePopup() {
+				window.close();
+			}
+		</script>
+	</body>
+</html>

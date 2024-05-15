@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>류미성 | 새 창 띄우기</title>
+	</head>
+	<body>
+		<h2>새로운 창 화면 가운데 띄우기 실습</h2>
+		<script>
+			window.onload = function () {
+				popup();
+			};
+
+			function popup() {
+				const screenWidth = window.screen.width;
+				const screenHeight = window.screen.height;
+
+				const popupWidth = 500;
+				const popupHeight = 500;
+
+				const top = (screenHeight - popupHeight) / 2;
+				const left = (screenWidth - popupWidth) / 2;
+
+				window.open(
+					"lab06-2.html",
+					"_blank",
+					`width=${popupWidth},height=${popupHeight},top=${top},left=${left}`
+				);
+			}
+		</script>
+	</body>
+</html>
