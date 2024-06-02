@@ -1,0 +1,85 @@
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 80px 20px 84px;
+}
+
+.title {
+	margin-bottom: 60px;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.faq-list .faq-item {
+	list-style: none;
+}
+
+.faq-list .faq-item .faq-item__question-text {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	color: #242424;
+}
+
+.accordion {
+	border-radius: 20px;
+	box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+	transition: max-height 0.3s ease, border-radius 0.3s ease;
+}
+
+.accordion .accordion__summary {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	width: 100%;
+	padding: 17px 24px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.accordion .accordion__summary::after {
+	content: "";
+	width: 24px;
+	height: 24px;
+	position: relative;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5119 8.43057C18.8264 8.161 19.2999 8.19743 19.5695 8.51192C19.839 8.82641 19.8026 9.29989 19.4881 9.56946L12.4881 15.5695C12.2072 15.8102 11.7928 15.8102 11.5119 15.5695L4.51192 9.56946C4.19743 9.29989 4.161 8.82642 4.43057 8.51192C4.70014 8.19743 5.17361 8.16101 5.48811 8.43057L12 14.0122L18.5119 8.43057Z' fill='%23121F34'/%3E%3C/svg%3E");
+	transition: transform 0.2s ease;
+}
+
+.accordion .accordion__summary .accordion__summary__text {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: left;
+	color: #242424;
+}
+
+.accordion .accordion__details {
+	overflow: hidden;
+	height: 0;
+	max-height: 0;
+	padding: 0px 24px;
+	box-sizing: border-box;
+	transition: height 0.3s ease, max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion.expanded .accordion__summary::after {
+	transform: rotate(180deg);
+}
+
+.accordion.expanded .accordion__details {
+	height: auto;
+	max-height: 9999px;
+	padding: 17px 24px;
+}
