@@ -1,0 +1,136 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+
+.signup-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	width: 560px;
+	box-sizing: border-box;
+}
+
+.signup-title {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	padding: 30px 0;
+}
+
+.signup-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	max-width: 800px;
+}
+
+.signup-content {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 6px;
+}
+
+.signup-content > p {
+	min-width: 100px;
+	margin: 0;
+	padding-top: 10px;
+	text-align: right;
+	font-size: 14px;
+}
+
+.signup-content-input,
+.signup-content-input-duplication {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	width: 100%;
+}
+
+.signup-content-input > input,
+.signup-content-input-duplication > input {
+	flex: 1;
+	color: #898989;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #898989;
+	border-radius: 6px;
+	font-size: 14px;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.signup-content-input > input:focus,
+.signup-content-input-duplication > input:focus {
+	border-color: #07b8ee;
+}
+
+.signup-content-input > span {
+	font-size: 12px;
+	color: #07b8ee;
+	width: 100%;
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+
+/* duplication button */
+.signup-content-input-duplication {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+}
+.signup-content-input-duplication > button {
+	padding: 10px;
+	border-radius: 6px;
+	border: 0;
+	background-color: #07b8ee;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+}
+.signup-content-input-duplication > button:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+}
+.signup-content-input-duplication > button:hover:not(:disabled) {
+	background-color: #07b8ee;
+}
+
+/* button */
+.sign-button-container {
+	display: flex;
+	justify-content: center;
+}
+
+#signup-button {
+	background-color: #07b8ee;
+	color: white;
+	width: 40%;
+	height: 40px;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	cursor: pointer;
+	margin: 20px;
+	align-self: center;
+}
+
+#signup-button:disabled {
+	background-color: #8e8e8e;
+	cursor: not-allowed;
+}
