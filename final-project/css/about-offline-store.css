@@ -1,0 +1,24 @@
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 80px 20px 84px;
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 60px;
+}
+
+.title {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.sub-title {
+	font-size: 18px;
+	color: #636363;
+	text-align: center;
+}
