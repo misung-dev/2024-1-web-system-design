@@ -1,0 +1,76 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* badge */
+header .badges {
+	position: absolute;
+	top: 200px;
+	right: 12px;
+	z-index: 10;
+}
+
+header .badges .badge {
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 12px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+}
+
+section {
+	padding: 10px;
+}
+
+/* VISUAL */
+.visual {
+	height: 646px;
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	background-image: url("/final-project/src/img/library-1.avif");
+	background-position: center top;
+	background-size: cover;
+}
+
+.visual .title {
+	position: absolute;
+	top: 88px;
+	left: -10px;
+}
+.visual .title .btn {
+	position: absolute;
+	top: 420px;
+	left: 100px;
+}
+
+.btn {
+	width: 130px;
+	padding: 10px;
+	border: 2px solid #333;
+	border-radius: 10px;
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: block;
+	transition: 0.4s;
+	/* background-color: #fff; */
+	text-decoration: none;
+}
+.btn:hover {
+	background-color: #333;
+	color: #fff;
+}
+.btn.btn--reverse {
+	background-color: #333;
+	color: #fff;
+}
+.btn.btn--reverse:hover {
+	background-color: transparent;
+	color: #333;
+}

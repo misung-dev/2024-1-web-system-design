@@ -29,6 +29,7 @@ body {
 	flex-direction: row;
 	align-items: center;
 	gap: 20px;
+	padding: 10px;
 }
 
 .logo {
@@ -81,6 +82,7 @@ body {
 	align-items: center;
 	gap: 20px;
 	padding: 10px;
+	box-sizing: border-box;
 	border-top: 1px solid #ddd;
 }
 
