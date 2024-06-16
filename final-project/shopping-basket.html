@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+		<link rel="stylesheet" href="./css/shopping-basket.css" />
+		<link rel="stylesheet" href="./css/header.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="menu">
+				<a href="login.html">로그인</a>
+				<a href="shopping-basket.html">장바구니</a>
+				<a href="purchase-history.html">구매내역 조회</a>
+			</div>
+
+			<div class="logo-search-bar-container">
+				<div class="logo">Logo Image</div>
+				<div class="search-bar">
+					<select>
+						<option value="ebook">eBook</option>
+					</select>
+					<input type="text" placeholder="검색어를 입력해주세요." />
+					<button type="submit">
+						<img src="./src/icon/free-icon-font-search-3917132.svg" alt="돋보기 아이콘" />
+					</button>
+				</div>
+			</div>
+
+			<nav class="sub-menu">
+				<div class="find-a-book-field">
+					<a href="#">도서 분야 찾기</a>
+				</div>
+				<div class="offline-faq">
+					<a href="about-offline-store.html">오프라인 매장</a>
+					<a href="faq.html">자주 묻는 질문</a>
+				</div>
+			</nav>
+		</header>
+
+		<!-- 장바구니 본문 -->
+		<div class="shopping-basket-container">
+			<h1>장바구니</h1>
+			<hr />
+			<div class="product-summary-container">
+				<div class="product-list">
+					<div class="product">
+						<input type="checkbox" />
+						<img src="./src/img/product-1.jpg" alt="질병 해방" />
+						<div class="product-info">
+							<h3>질병 해방</h3>
+							<p>18,000원</p>
+							<input type="number" value="1" min="1" />
+						</div>
+					</div>
+					<div class="product">
+						<input type="checkbox" />
+						<img src="./src/img/product-2.jpg" alt="바르다 손글씨" />
+						<div class="product-info">
+							<h3>바르다 손글씨</h3>
+							<p>18,000원</p>
+							<input type="number" value="1" min="1" />
+						</div>
+					</div>
+				</div>
+				<div class="summary">
+					<h3>결제 정보</h3>
+					<p><span>상품 총 금액</span><span>0원</span></p>
+					<p><span>배송비</span><span>0원</span></p>
+					<p><span>상품 목록 (수량)</span></p>
+					<p>질병 해방 (1권)</p>
+					<a href="#" class="btn">결제하러 가기</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
