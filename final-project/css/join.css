@@ -89,7 +89,6 @@ body {
 }
 
 .email-group select {
-	/* width: 150px; */
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -111,6 +110,20 @@ body {
 	margin-top: 5px;
 }
 
+.form-group .email-language-error {
+	display: none;
+	color: #ff7777;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.form-group .email-option-error {
+	display: none;
+	color: #ff7777;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
 .form-group.error input {
 	border: 1px solid #ff7777;
 }
@@ -120,6 +133,14 @@ body {
 }
 
 .form-group.error .email-format {
+	display: block;
+}
+
+.form-group.error .email-language-error {
+	display: block;
+}
+
+.form-group.error .email-option-error {
 	display: block;
 }
 
@@ -179,7 +200,12 @@ body {
 	cursor: pointer;
 }
 
-.join-btn:hover {
+.join-btn:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.join-btn:hover:not(:disabled) {
 	background-color: #07b8ee;
 }
 

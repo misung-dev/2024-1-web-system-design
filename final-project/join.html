@@ -38,9 +38,9 @@
 					<div class="form-group">
 						<label for="email">이메일</label>
 						<div class="email-group">
-							<input type="email" id="email" placeholder="이메일" required />
+							<input type="text" id="email-local" placeholder="이메일" required />
 							<span>@</span>
-							<select>
+							<select id="email-domain">
 								<option value="">선택해 주세요</option>
 								<option value="sookmyung.ac.kr">sookmyung.ac.kr</option>
 								<option value="gmail.com">gmail.com</option>
@@ -50,6 +50,8 @@
 						</div>
 						<p class="error-message">필수 입력 항목입니다.</p>
 						<p class="error-message email-format">이메일 형식이 올바르지 않습니다.</p>
+						<p class="error-message email-language-error">영어로 입력해주세요.</p>
+						<p class="error-message email-option-error">이메일 옵션을 선택해주세요.</p>
 					</div>
 
 					<!-- 약관동의 -->
