@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
 		<link rel="stylesheet" href="./css/shopping-basket.css" />
 		<link rel="stylesheet" href="./css/header.css" />
+		<script src="./js/shopping-basket.js" dfer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -47,7 +48,7 @@
 			<div class="product-summary-container">
 				<div class="product-list">
 					<div class="product">
-						<input type="checkbox" />
+						<input type="checkbox" data-price="18000" />
 						<img src="./src/img/product-1.jpg" alt="질병 해방" />
 						<div class="product-info">
 							<h3>질병 해방</h3>
@@ -56,7 +57,7 @@
 						</div>
 					</div>
 					<div class="product">
-						<input type="checkbox" />
+						<input type="checkbox" data-price="18000" />
 						<img src="./src/img/product-2.jpg" alt="바르다 손글씨" />
 						<div class="product-info">
 							<h3>바르다 손글씨</h3>
@@ -66,14 +67,16 @@
 					</div>
 				</div>
 				<div class="summary">
-					<h3>결제 정보</h3>
-					<p><span>상품 총 금액</span><span>0원</span></p>
-					<p><span>배송비</span><span>0원</span></p>
+					<p><span>상품 총 금액</span><span id="total-price">0원</span></p>
+					<p><span>배송비</span><span id="shipping-fee">0원</span></p>
+					<p class="shipping">20,000원 이상 구매시 배송비 무료</p>
+					<hr />
 					<p><span>상품 목록 (수량)</span></p>
-					<p>질병 해방 (1권)</p>
+					<div id="product-list-summary"></div>
 					<a href="#" class="btn">결제하러 가기</a>
 				</div>
 			</div>
 		</div>
+		<script src="./js/shopping-basket.js"></script>
 	</body>
 </html>

@@ -8,7 +8,7 @@ h1 {
 	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
-	margin: 30px;
+	margin: 30px 0;
 }
 
 .product-summary-container {
@@ -18,12 +18,11 @@ h1 {
 }
 
 .product-list {
-	width: 80%;
+	width: 70%;
 }
 
 .product {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #ddd;
 	padding: 20px 0;
@@ -38,34 +37,72 @@ h1 {
 }
 .product-info h3 {
 	margin: 0 0 10px;
+	font-size: 18px;
 }
 .product-info p {
 	margin: 5px 0;
+	font-size: 16px;
 }
+.product input[type="number"] {
+	width: 50px;
+	height: 30px;
+	margin-top: 10px;
+	border: 1.4px solid #35c5f0;
+	text-align: center;
+	font-size: 16px;
+	padding: 0;
+	position: relative;
+}
+
+.product input[type="number"]:focus {
+	outline: none;
+	border-color: #35c5f0;
+}
+
 .summary {
+	display: flex;
+	flex-direction: column;
 	border: 1px solid #ddd;
 	padding: 20px;
 	border-radius: 10px;
-	width: 20%;
+	width: 25%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.summary h3 {
-	margin: 0 0 20px;
-}
+
 .summary p {
 	display: flex;
 	justify-content: space-between;
 	margin: 10px 0;
+	font-size: 16px;
 }
-.btn {
+.summary p span:last-child {
+	font-weight: bold;
+}
+.summary .shipping {
+	color: gray;
+	font-size: 12px;
+	margin: 0;
+}
+
+.summary .btn {
+	margin-top: 20px;
 	display: block;
 	width: 100%;
 	padding: 15px 0;
 	background-color: #35c5f0;
 	color: #fff;
-	text-align: center;
 	border: none;
 	border-radius: 4px;
-	font-size: 16px;
 	cursor: pointer;
+	font-size: 16px;
+	text-align: center;
 	text-decoration: none;
+}
+.summary .btn:hover {
+	background-color: #07b8ee;
+}
+
+.summary hr {
+	border: 1px solid #ddd;
+	margin: 20px 0 10px;
 }
