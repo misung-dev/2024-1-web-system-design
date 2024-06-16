@@ -1,0 +1,109 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.menu {
+	display: flex;
+	gap: 20px;
+	font-size: 14px;
+	margin: 10px;
+	margin-left: auto;
+}
+
+.menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.logo-search-bar-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.logo {
+	width: 100px;
+	height: 50px;
+	background-color: lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 검색창 */
+.search-bar {
+	display: flex;
+	align-items: center;
+	width: 560px;
+	height: 48px;
+	padding-right: 14px;
+	background: #fff;
+	border: 1px solid #35c5f0;
+	border-radius: 24px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.search-bar select,
+.search-bar input {
+	border: none;
+	outline: none;
+	margin: 0 5px;
+}
+
+.search-bar input {
+	flex-grow: 1;
+}
+
+.search-bar button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.search-bar button img {
+	height: 20px;
+}
+
+.sub-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 10px;
+	border-top: 1px solid #ddd;
+}
+
+.sub-menu a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 14px;
+}
+
+.find-a-book-field {
+	font-weight: bold;
+}
+
+.find-a-book-field a {
+	color: #35c5f0;
+}
+
+.offline-faq {
+	display: flex;
+	gap: 20px;
+	font-size: 14px;
+	margin: 6px;
+}
+.offline-faq a {
+	font-weight: bold;
+}

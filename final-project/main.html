@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fonticon/fir@1.0.0/css/fi.css" />
+		<script src="./js/main.js" defer></script>
 	</head>
 	<body>
-		<a href="faq.html">자주 묻는 질문</a>
-		<a href="login.html">로그인</a>
-		<a href="join.html">회원가입</a>
-		<a href="about-offline-store.html">오프라인 매장 안내</a>
+		<header class="header">
+			<div class="menu">
+				<a href="login.html">로그인</a>
+				<a href="#">장바구니</a>
+				<a href="#">구매내역 조회</a>
+			</div>
+
+			<div class="logo-search-bar-container">
+				<div class="logo">Logo Image</div>
+				<div class="search-bar">
+					<select>
+						<option value="ebook">eBook</option>
+					</select>
+					<input type="text" placeholder="검색어를 입력해주세요." />
+					<button type="submit">
+						<img src="./src/icon/free-icon-font-search-3917132.svg" alt="돋보기 아이콘" />
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<nav class="sub-menu">
+			<div class="find-a-book-field">
+				<a href="#">도서 분야 찾기</a>
+			</div>
+			<div class="offline-faq">
+				<a href="about-offline-store.html">오프라인 매장</a>
+				<a href="faq.html">자주 묻는 질문</a>
+			</div>
+		</nav>
 	</body>
 </html>
