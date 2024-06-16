@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>오프라인 매장 안내</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
 		<link rel="stylesheet" href="./css/about-offline-store.css" />
+		<script src="./js/about-offline-store.js" defer></script>
 	</head>
 	<body>
 		<div class="container">
@@ -13,6 +14,11 @@
 				<h1 class="title">오프라인 매장 안내</h1>
 				<p class="sub-title">가까운 매장을 찾아보세요!</p>
 			</div>
+			<div id="map"></div>
+			<script
+				type="text/javascript"
+				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7df1e1ff2f0d91cd1f8c13f16d3ca9ce"
+			></script>
 		</div>
 	</body>
 </html>
