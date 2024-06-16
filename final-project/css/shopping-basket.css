@@ -102,6 +102,11 @@ h1 {
 	background-color: #07b8ee;
 }
 
+.summary .btn.disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
 .summary hr {
 	border: 1px solid #ddd;
 	margin: 20px 0 10px;
