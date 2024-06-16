@@ -1,0 +1,93 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px;
+}
+h1 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 30px;
+}
+
+/* 검색 기간 설정 */
+.search-container {
+	display: flex;
+	justify-content: flex-end;
+	/* margin-bottom: 20px; */
+}
+.search-container label {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.search-container input[type="date"] {
+	padding: 5px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.search-container button {
+	padding: 5px 10px;
+	background-color: #35c5f0;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.search-container button:hover {
+	background-color: #07b8ee;
+}
+
+.order-container {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 8px;
+	align-items: flex-end;
+	border-bottom: 1px solid #ddd;
+}
+
+.order-list {
+	padding: 20px 0;
+}
+.order-list h4 {
+	margin: 0;
+	color: gray;
+	font-size: 14px;
+}
+.order-list .book-list {
+	margin: 20px 0;
+}
+
+.order-list p {
+	margin: 5px 0;
+}
+.order-total {
+	font-weight: bold;
+	margin-top: 10px;
+}
+.order-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+.order-actions button {
+	width: 100px;
+	height: 40px;
+	padding: 10px 0;
+	border: 1px solid #35c5f0;
+	border-radius: 4px;
+	background-color: #35c5f0;
+	color: #ffffff;
+	cursor: pointer;
+}
+.order-actions button:hover {
+	background-color: #07b8ee;
+}
+.order-actions button:last-child {
+	background-color: white;
+	color: #35c5f0;
+}
