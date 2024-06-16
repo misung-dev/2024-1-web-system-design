@@ -153,3 +153,66 @@ header .badges .badge {
 	color: #fff;
 	text-decoration: none;
 }
+
+/* 전자도서관 설명 */
+.description-about-ebook {
+	text-align: center;
+	padding: 40px 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.description-about-ebook h2 {
+	margin-bottom: 20px;
+	font-size: 40px;
+	font-weight: bold;
+	margin: 90px 0 70px;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 80px;
+}
+
+.description .number {
+	display: flex;
+	width: 100px;
+	height: 50px;
+	color: #fff;
+	background-color: #35c5f0;
+	border-radius: 50px;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.description h3 {
+	font-size: 28px;
+	margin: 20px;
+	font-weight: bold;
+	color: #4d4d4d;
+}
+
+.features {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.feature {
+	text-align: center;
+	width: 18%;
+	margin-bottom: 20px;
+}
+
+.feature img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 10px;
+}
