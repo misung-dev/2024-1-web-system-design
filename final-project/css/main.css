@@ -129,7 +129,7 @@ header .badges .badge {
 }
 
 .swiper-container {
-	width: 300px;
+	/* width: 300px; */
 	height: 40px;
 	overflow: hidden;
 	display: flex;
@@ -143,7 +143,7 @@ header .badges .badge {
 }
 
 .swiper-slide {
-	min-width: 300px;
+	/* min-width: 300px; */
 	display: flex;
 	align-items: center;
 	height: 100%;
@@ -225,9 +225,6 @@ footer {
 	background-color: #272727;
 	border-top: 1px solid #333;
 }
-footer .inner {
-	padding: 40px 0 60px 0;
-}
 footer .menu {
 	display: flex;
 	justify-content: center;
@@ -249,8 +246,6 @@ footer .menu li::before {
 footer .menu li:last-child::before {
 	display: none;
 }
-footer .menu li {
-}
 footer .menu li a {
 	color: #ccc;
 	font-size: 12px;
@@ -262,7 +257,7 @@ footer .menu li a.skyblue {
 	color: #35c5f0;
 }
 footer .btn-group {
-	margin-top: 20px;
+	margin: 20px;
 	display: flex;
 	justify-content: center;
 }
@@ -293,7 +288,7 @@ footer .copyright {
 }
 footer .logo-container {
 	display: flex;
-	margin-top: 30px;
+	padding: 30px 0 50px;
 	justify-content: center;
 }
 
@@ -331,46 +326,31 @@ footer .logo-container {
 
 /* AWARDS */
 .awards {
+	display: flex;
 	background-color: #272727;
 	color: #fff;
-	padding: 20px;
-	position: relative;
+	padding: 20px 40px;
 	max-width: 1100px;
-}
-
-.awards .inner {
-	max-width: 1100px;
-	margin: 0 auto;
-	position: relative;
-	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
 }
 
 .awards .swiper-container {
 	overflow: hidden;
-}
-
-.awards .swiper-wrapper {
 	display: flex;
 }
 
 .awards .swiper-slide {
 	flex: 0 0 auto;
 	width: calc((100% / 4) - 20px);
-	margin-right: 20px;
-}
-
-.awards .swiper-slide img {
-	display: block;
 }
 
 .awards .swiper-prev,
 .awards .swiper-next {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	color: #fff;
+	display: flex;
+	justify-content: center;
 	cursor: pointer;
-	padding: 10px;
 	z-index: 10;
 }
 
@@ -382,11 +362,8 @@ footer .logo-container {
 	right: 0;
 }
 
-.awards .material-icons {
-}
-
-.awards .material-icons img {
-	height: 30px;
+.awards img {
+	height: 100%;
 }
 
 #to-top {
