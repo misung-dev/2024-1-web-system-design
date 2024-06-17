@@ -152,6 +152,9 @@ header .badges .badge {
 .swiper-slide a {
 	color: #fff;
 	text-decoration: none;
+	display: flex;
+	align-items: center;
+	height: 100%;
 }
 
 /* 전자도서관 설명 */
