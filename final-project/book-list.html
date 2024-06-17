@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>도서 목록</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="./css/book-list.css" />
+		<script src="./js/book-list.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="menu">
+				<a href="login.html">로그인</a>
+				<a href="shopping-basket.html">장바구니</a>
+				<a href="purchase-history.html">구매내역 조회</a>
+			</div>
+
+			<div class="logo-search-bar-container">
+				<div class="logo">Logo Image</div>
+				<div class="search-bar">
+					<select>
+						<option value="ebook">eBook</option>
+					</select>
+					<input type="text" id="query" placeholder="검색어를 입력해주세요." />
+					<button type="submit" onclick="searchBooks()">
+						<img src="./src/icon/free-icon-font-search-3917132.svg" alt="돋보기 아이콘" />
+					</button>
+					<div id="results"></div>
+				</div>
+			</div>
+
+			<nav class="sub-menu">
+				<div class="find-a-book-field">
+					<a href="#">도서 분야 찾기</a>
+				</div>
+				<div class="offline-faq">
+					<a href="about-offline-store.html">오프라인 매장</a>
+					<a href="faq.html">자주 묻는 질문</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="sidebar">
+				<ul>
+					<li><a href="#" onclick="toggleSubmenu('koreanBooks')">국내 도서</a></li>
+					<ul id="koreanBooks" class="submenu">
+						<li>경영 경제</li>
+						<li>사회 정치</li>
+						<li>소설/시/희곡</li>
+						<li>역사</li>
+						<li>예술</li>
+						<li>자연 과학</li>
+						<li>IT 모바일</li>
+					</ul>
+					<li><a href="#" onclick="toggleSubmenu('foreignBooks')">외국 도서</a></li>
+					<ul id="foreignBooks" class="submenu">
+						<li>경영 경제</li>
+						<li>사회 정치</li>
+						<li>소설/시/희곡</li>
+						<li>역사</li>
+						<li>예술</li>
+						<li>자연 과학</li>
+						<li>IT 모바일</li>
+					</ul>
+					<li><a href="#" onclick="toggleSubmenu('ebooks')">eBook</a></li>
+					<ul id="ebooks" class="submenu">
+						<li>경영 경제</li>
+						<li>사회 정치</li>
+						<li>소설/시/희곡</li>
+						<li>역사</li>
+						<li>예술</li>
+						<li>자연 과학</li>
+						<li>IT 모바일</li>
+					</ul>
+					<li><a href="#">티켓</a></li>
+				</ul>
+			</div>
+			<div class="main-content">
+				<div class="category">
+					<button>종합</button>
+					<button>실시간</button>
+					<button>일별</button>
+					<button>월별/주별</button>
+					<button>스테디셀러</button>
+				</div>
+				<div class="book-list">
+					<div class="book-item">
+						<img src="book1.jpg" alt="Book 1" />
+						<p>또박또박 손글씨</p>
+						<p>15,120원 / 840원</p>
+					</div>
+					<div class="book-item">
+						<img src="book2.jpg" alt="Book 2" />
+						<p>나도 손글씨 바르게 쓸 수 있어</p>
+						<p>10,800원 / 600원</p>
+					</div>
+					<div class="book-item">
+						<img src="book3.jpg" alt="Book 3" />
+						<p>바른 글씨 바른 노트</p>
+						<p>16,020원 / 810원</p>
+					</div>
+					<div class="book-item">
+						<img src="book4.jpg" alt="Book 4" />
+						<p>바르다 손글씨</p>
+						<p>12,600원 / 700원</p>
+					</div>
+					<div class="book-item">
+						<img src="book5.jpg" alt="Book 5" />
+						<p>이토록 멋진 영어 필기체 손글씨</p>
+						<p>15,030원 / 830원</p>
+					</div>
+					<div class="book-item">
+						<img src="book6.jpg" alt="Book 6" />
+						<p>NEW 미꽃체 손글씨 노트</p>
+						<p>15,030원 / 830원</p>
+					</div>
+					<div class="book-item">
+						<img src="book7.jpg" alt="Book 7" />
+						<p>미꽃체 필사 노트</p>
+						<p>17,820원 / 900원</p>
+					</div>
+					<div class="book-item">
+						<img src="book8.jpg" alt="Book 8" />
+						<p>어린이를 위한 미꽃체 손글씨</p>
+						<p>15,030원 / 830원</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
