@@ -8,3 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+function toggleSubmenu(id) {
+	const submenu = document.getElementById(id);
+	const icon = document.getElementById(id + "Icon");
+
+	if (submenu.style.display === "block") {
+		submenu.style.display = "none";
+		icon.textContent = "+";
+	} else {
+		submenu.style.display = "block";
+		icon.textContent = "-";
+	}
+}

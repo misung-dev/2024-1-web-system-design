@@ -13,7 +13,7 @@ body {
 
 /* 왼쪽 사이드바 */
 .sidebar {
-	width: 200px;
+	width: 20%;
 	background-color: #fff;
 	border: 1px solid #35c5f0;
 	border-radius: 10px;
@@ -33,7 +33,7 @@ body {
 
 .sidebar ul {
 	list-style: none;
-	padding: 6px 16px;
+	padding: 16px 16px;
 }
 
 .sidebar ul li {
@@ -60,7 +60,13 @@ body {
 	margin-bottom: 4px;
 }
 
-/* 도서 목록 */
+.toggle-icon {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+/* 상단 탭 */
 .main-content {
 	flex: 1;
 }
@@ -97,23 +103,59 @@ body {
 	color: white;
 }
 
+/* 도서 목록 */
 .book-list {
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .book-item {
-	width: 22%;
-	margin: 1%;
-	background-color: #fff;
-	border: 1px solid #ddd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px;
 	padding: 10px;
+	border: 1px solid #ddd;
+	width: calc(25% - 20px);
+	background-color: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
 	text-align: center;
+	gap: 4px;
+}
+
+@media (max-width: 900px) {
+	.book-item {
+		width: calc(33.33% - 20px);
+	}
+}
+
+@media (max-width: 600px) {
+	.book-item {
+		width: calc(50% - 20px);
+	}
 }
 
 .book-item img {
 	width: 100%;
 	height: auto;
 	margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+	.book-item {
+		width: calc(33.33% - 20px);
+	}
+}
+
+.book-item .book-title {
+	font-weight: bold;
+}
+.book-item .book-author {
+	font-size: 14px;
+	color: #636363;
+}
+.book-item .book-price {
+	font-size: 14px;
+	color: #ea5355;
 }
