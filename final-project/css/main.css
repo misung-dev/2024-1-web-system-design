@@ -291,6 +291,9 @@ footer .logo-container {
 	padding: 30px 0 50px;
 	justify-content: center;
 }
+footer .logo-container img {
+	width: 140px;
+}
 
 .btn {
 	width: 130px;
