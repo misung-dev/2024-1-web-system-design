@@ -21,3 +21,20 @@ function copyUrl() {
 		}
 	);
 }
+
+// 장바구니 버튼 클릭시 이벤트 발생
+function addToCart() {
+	const notification = document.getElementById("cart-notification");
+	notification.style.display = "block";
+	setTimeout(function () {
+		notification.style.display = "none";
+	}, 2000);
+}
+
+// 바로구매 버튼 클릭시 이벤트 발생
+function buyNow() {
+	const userConfirmed = confirm("결제 페이지로 바로 이동하시겠습니까?");
+	if (userConfirmed) {
+		window.location.href = "pay.html";
+	}
+}

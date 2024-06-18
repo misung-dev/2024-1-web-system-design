@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>오프라인 매장 안내</title>
+		<title>WeBS | 결제하기</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./css/header.css" />
-		<link rel="stylesheet" href="./css/about-offline-store.css" />
-		<script src="./js/about-offline-store.js" defer></script>
+		<link rel="stylesheet" href="./css/pay.css" />
+		<script src="./js/main.js" defer></script>
+		<script src="./js/pay.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -17,7 +19,6 @@
 				<a href="purchase-history.html">구매내역 조회</a>
 				<a href="pay.html">결제하기</a>
 			</div>
-
 			<div class="logo-search-bar-container">
 				<div class="logo">
 					<a href="main.html">
@@ -36,7 +37,6 @@
 					</button>
 				</div>
 			</div>
-
 			<nav class="sub-menu">
 				<div class="find-a-book-field">
 					<a href="#">도서 분야 찾기</a>
@@ -48,16 +48,43 @@
 			</nav>
 		</header>
 
-		<div class="container">
-			<div class="title-container">
-				<h1 class="title">오프라인 매장 안내</h1>
-				<p class="sub-title">가까운 매장을 찾아보세요!</p>
+		<!-- 결제하기 본문 -->
+		<div class="pay-container">
+			<h1>결제하기</h1>
+			<hr />
+			<div class="product-summary-container">
+				<div class="product-list">
+					<div class="product">
+						<img src="./src/img/product-1.jpg" alt="질병 해방" />
+						<div class="product-info">
+							<h3>질병 해방</h3>
+							<p>18,000원</p>
+							<p>1권</p>
+						</div>
+					</div>
+					<div class="product">
+						<img src="./src/img/product-2.jpg" alt="바르다 손글씨" />
+						<div class="product-info">
+							<h3>바르다 손글씨</h3>
+							<p>18,000원</p>
+							<p>1권</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 최종 결제 금액 -->
+				<div class="summary">
+					<p><span>상품 총 금액</span><span id="total-price">35,000원</span></p>
+					<p class="shipping">배송비 포함</p>
+					<hr />
+					<p><span>현재 잔여 포인트</span><span id="remaining-points">5,000원</span></p>
+					<p>
+						<span>사용할 포인트</span><span><input type="text" id="used-points" /></span>
+					</p>
+					<p><span>최종 결제 금액</span><span id="final-price">35,000원</span></p>
+					<a href="#" class="btn" id="checkout-button">결제하기</a>
+				</div>
 			</div>
-			<div id="map"></div>
-			<script
-				type="text/javascript"
-				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7df1e1ff2f0d91cd1f8c13f16d3ca9ce"
-			></script>
 		</div>
 	</body>
 </html>

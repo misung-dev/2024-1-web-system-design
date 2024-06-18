@@ -39,7 +39,8 @@ body {
 	height: 12px;
 }
 
-.copy-notification {
+.copy-notification,
+.cart-notification {
 	display: none;
 	position: fixed;
 	top: 100px;
@@ -50,6 +51,7 @@ body {
 	padding: 10px;
 	border-radius: 5px;
 	font-size: 14px;
+	z-index: 1000;
 }
 
 /* 도서 정보 (이미지, 가격 정보 등) */

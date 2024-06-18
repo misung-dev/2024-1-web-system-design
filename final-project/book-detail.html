@@ -19,6 +19,7 @@
 				<a href="login.html">로그인</a>
 				<a href="shopping-basket.html">장바구니</a>
 				<a href="purchase-history.html">구매내역 조회</a>
+				<a href="pay.html">결제하기</a>
 			</div>
 			<div class="logo-search-bar-container">
 				<div class="logo">
@@ -110,6 +111,7 @@
 					</div>
 				</div>
 				<div class="copy-notification" id="copy-notification">URL이 복사되었습니다</div>
+				<div class="cart-notification" id="cart-notification">장바구니에 담겼습니다</div>
 
 				<hr />
 
@@ -150,8 +152,8 @@
 							/>
 						</div>
 						<div class="buttons">
-							<button class="cart">장바구니</button>
-							<button class="buy-now">바로구매</button>
+							<button class="cart" onclick="addToCart()">장바구니</button>
+							<button class="buy-now" onclick="buyNow()">바로구매</button>
 						</div>
 					</div>
 				</article>

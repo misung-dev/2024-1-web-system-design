@@ -3,6 +3,7 @@ body {
 	max-width: 1100px;
 	margin: 0 auto;
 }
+
 h1 {
 	text-align: center;
 	font-size: 40px;
@@ -10,11 +11,13 @@ h1 {
 	margin: 30px;
 }
 
+.purchase-history-container {
+	margin-bottom: 40px;
+}
 /* 검색 기간 설정 */
 .search-container {
 	display: flex;
 	justify-content: flex-end;
-	/* margin-bottom: 20px; */
 }
 .search-container label {
 	display: flex;
@@ -62,7 +65,7 @@ h1 {
 }
 
 .order-list p {
-	margin: 5px 0;
+	margin: 10px 0;
 }
 .order-total {
 	font-weight: bold;
@@ -82,6 +85,7 @@ h1 {
 	background-color: #35c5f0;
 	color: #ffffff;
 	cursor: pointer;
+	font-size: 14px;
 }
 .order-actions button:hover {
 	background-color: #07b8ee;
@@ -89,4 +93,10 @@ h1 {
 .order-actions button:last-child {
 	background-color: white;
 	color: #35c5f0;
+}
+
+.order-actions button.refund-completed,
+.order-actions button.purchase-completed {
+	background-color: #35c5f0;
+	color: #ffffff;
 }
