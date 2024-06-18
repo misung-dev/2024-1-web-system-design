@@ -80,19 +80,73 @@ body {
 	box-sizing: border-box;
 	border-top: 1px solid #ddd;
 }
-
 .sub-menu a {
 	text-decoration: none;
 	color: #000000;
 	font-size: 16px;
 }
-
 .find-a-book-field {
 	font-weight: bold;
+	position: relative;
+	display: inline-block;
 }
-
 .find-a-book-field a {
 	color: #35c5f0;
+}
+.find-a-book-field img {
+	height: 16px;
+	vertical-align: middle;
+}
+.sub-menu-category,
+.menu-item .sub-sub-menu {
+	display: none;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	padding: 10px;
+	border-radius: 4px;
+}
+.find-a-book-field:hover .sub-menu-category,
+.find-a-book-field:hover .menu-item .sub-sub-menu {
+	display: block;
+}
+.menu-item {
+	position: relative;
+}
+.menu-item .sub-sub-menu {
+	left: 100%;
+	top: 0;
+	background-color: white;
+	z-index: 1;
+	padding: 10px;
+	border-radius: 4px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.menu-item:hover {
+	background-color: #35c5f0; /* 배경색을 파란색으로 변경 */
+}
+.menu-item .sub-sub-menu a {
+	display: block;
+	padding: 8px 12px;
+	color: #000;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	width: 200px;
+}
+.menu-item .sub-sub-menu a:hover {
+	background-color: #f0f0f0;
+	border-radius: 4px;
+}
+.sub-menu-category a {
+	display: block;
+	padding: 8px 12px;
+	color: #000;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+.sub-menu-category a:hover {
+	background-color: #e0e0e0;
+	border-radius: 4px;
 }
 
 .offline-faq {
