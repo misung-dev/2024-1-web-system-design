@@ -6,6 +6,39 @@ body {
 	height: 100vh;
 }
 
+/* 도서 상단 무료배송, 소득공제, 링크 공유 표기 */
+.top-badge {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.top-badge-info {
+	display: flex;
+	gap: 6px;
+}
+.top-badge-info p {
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	padding: 5px 10px;
+	font-size: 10px;
+	color: #636363;
+}
+.top-badge-share {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #d9d9d9;
+	border-radius: 50%;
+	padding: 6px;
+	margin-right: 14px;
+}
+.top-badge-share img {
+	width: 12px;
+	height: 12px;
+}
+
+/* 도서 정보 (이미지, 가격 정보 등) */
 .book-info {
 	display: flex;
 }
@@ -121,6 +154,7 @@ select {
 	border: 1px solid #35c5f0;
 	border-radius: 5px;
 	font-weight: bold;
+	cursor: pointer;
 }
 .buttons .buy-now {
 	width: 100%;
@@ -142,6 +176,7 @@ select {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px 0;
+	margin-right: 20px;
 }
 .ads img {
 	width: 48%;
