@@ -48,6 +48,7 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 8px;
+	margin: 0 40px;
 	align-items: flex-end;
 	border-bottom: 1px solid #ddd;
 }
