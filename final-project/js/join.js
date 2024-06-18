@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			const englishRegex = /^[a-zA-Z0-9@.]*$/;
 			const positiveMessage = "멋진 이메일이네요!";
 
-			const emailGroup = document.querySelector(".form-group");
+			const emailGroup = input.closest(".form-group");
 			const emailError = emailGroup.querySelector(".email-error");
 			const emailFormatError = emailGroup.querySelector(".email-format");
 			const emailLanguageError = emailGroup.querySelector(".email-language-error");
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		];
 		const allValid = inputs.every((input) => validateInput(input, false));
 		const requiredCheckboxesChecked = Array.from(requiredCheckboxes)
-			.filter((checkbox) => checkbox.nextElementSibling.classList.contains("terms-required"))
+			.filter((checkbox) => checkbox.parentElement.querySelector(".terms-required"))
 			.every((cb) => cb.checked);
 
 		joinBtn.disabled = !(allValid && requiredCheckboxesChecked);
@@ -205,7 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		valid &= validateInput(emailDomainInput);
 
 		if (valid) {
-			form.submit();
+			alert("회원가입이 완료되었습니다! 로그인 페이지로 이동합니다!");
+			window.location.href = "login.html";
 		}
 	});
 
@@ -221,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
+	// 전체동의 체크박스 처리
 	const allConsentCheckbox = document.querySelector('.terms input[type="checkbox"].all-consent');
 	const consentCheckboxes = document.querySelectorAll(
 		'.terms input[type="checkbox"]:not(.all-consent)'
@@ -239,12 +241,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (!this.checked) {
 				allConsentCheckbox.checked = false;
 			} else {
-				const allChecked = Array.from(consentCheckboxes).every((cb) => cb.checked);
+				const allChecked = Array.from(consentCheckboxes)
+					.filter((checkbox) => checkbox.parentElement.querySelector(".terms-required"))
+					.every((cb) => cb.checked);
 				allConsentCheckbox.checked = allChecked;
 			}
 			checkFormValidity();
 		});
 	});
 
+	// 페이지 로드 시 초기 버튼 상태 설정
 	checkFormValidity();
 });
