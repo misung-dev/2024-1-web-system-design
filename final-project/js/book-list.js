@@ -24,9 +24,9 @@ function toggleSubmenu(id) {
 
 function loadBooks(category, subcategory) {
 	const fileMap = {
-		domestic: "/database/domestic-book-list.json",
-		foreign: "/database/foreign-book-list.json",
-		ebook: "/database/ebook-book-list.json",
+		domestic: "/final-project/database/domestic-book-list.json",
+		foreign: "/final-project/database/foreign-book-list.json",
+		ebook: "/final-project/database/ebook-book-list.json",
 	};
 
 	fetch(fileMap[category])
@@ -38,9 +38,9 @@ function loadBooks(category, subcategory) {
 		})
 		.then((data) => {
 			const bookListContainer = document.getElementById("book-list");
-			bookListContainer.innerHTML = ""; // Clear previous books
+			bookListContainer.innerHTML = "";
 
-			data.forEach((categoryData) => {
+			data.categoryList.forEach((categoryData) => {
 				if (categoryData.category === subcategory) {
 					categoryData.books.forEach((book) => {
 						const bookItem = document.createElement("div");
@@ -74,3 +74,5 @@ function loadBooks(category, subcategory) {
 		})
 		.catch((error) => console.error("Error fetching the book data:", error));
 }
+
+loadBooks("domestic", "경영/경제");
