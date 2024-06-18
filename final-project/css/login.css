@@ -74,6 +74,7 @@ body {
 	display: flex;
 	align-items: center;
 	height: 18px;
+	margin-top: 6px;
 }
 
 .login-container label .custom-checkbox {
