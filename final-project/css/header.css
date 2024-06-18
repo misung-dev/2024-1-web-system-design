@@ -71,7 +71,7 @@ body {
 	height: 20px;
 }
 
-.sub-menu {
+.main-menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -80,7 +80,7 @@ body {
 	box-sizing: border-box;
 	border-top: 1px solid #ddd;
 }
-.sub-menu a {
+.main-menu a {
 	text-decoration: none;
 	color: #000000;
 	font-size: 16px;
@@ -96,76 +96,69 @@ body {
 .find-a-book-field img {
 	height: 16px;
 	vertical-align: middle;
+	padding-right: 6px;
 }
-.sub-menu-category {
+.main-menu-category-container {
 	display: none;
+	width: 400px;
+	background-color: #fff;
 	position: absolute;
-	background-color: white;
-	z-index: 1;
-	padding: 10px;
-	border-radius: 4px;
+	top: 100%;
+	left: 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 100;
+	border-radius: 6px;
 }
-.find-a-book-field:hover .sub-menu-category,
-.sub-menu-category:hover {
-	display: block;
+.main-menu-category {
 }
-.menu-item {
-	position: relative;
-	width: 100px;
+.find-a-book-field:hover .main-menu-category-container {
+	display: flex;
 }
-.menu-item:hover {
+.main-menu-category {
+	display: flex;
+	flex-direction: column;
 	border-right: 4px solid #35c5f0;
 }
-.menu-item:hover + .shared-sub-menu,
-.shared-sub-menu:hover {
-	border-right: none;
-	display: block;
-}
-.shared-sub-menu {
-	display: none;
-	position: absolute;
-	left: 100%;
-	top: 0;
-	background-color: white;
-	z-index: 1;
+.main-menu-category-container .main-menu-category .menu-item {
 	padding: 10px;
-	border-radius: 4px;
-	width: 200px;
+	width: 80px;
 }
-.find-a-book-field:hover .shared-sub-menu,
-.shared-sub-menu:hover {
-	display: block;
+.main-menu-category-container .main-menu-category .menu-item:hover {
+	background-color: #35c5f0;
+	color: #fff;
 }
-.menu-item .sub-sub-menu a {
-	display: block;
-	padding: 8px 12px;
-	color: #000;
-	text-decoration: none;
-	transition: background-color 0.3s;
-	width: 200px;
+.main-menu-category-container .main-menu-category .menu-item a {
+	color: #000000;
+	font-weight: bold;
 }
-.menu-item .sub-sub-menu a:hover {
-	border-radius: 4px;
-}
-.sub-menu-category-container {
-	width: 200px;
-	display: flex;
-	background-color: #fff;
+.main-menu-category-container .main-menu-category .menu-item:hover a {
+	color: #fff;
 }
 .sub-menu-category {
-	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	padding: 10px 0px 10px 20px;
+	gap: 20px;
 }
 .sub-menu-category a {
-	display: block;
-	padding: 8px 12px;
-	color: #000;
-	text-decoration: none;
-	transition: background-color 0.3s;
+	color: #000000;
+	font-weight: normal;
+	text-align: left;
 }
-.sub-menu-category a:hover {
-	border-radius: 4px;
+.goods {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 0;
+}
+.goods img {
+	height: 240px;
+	border-radius: 6px;
 }
 
+/* 우측 메뉴 */
 .offline-faq {
 	display: flex;
 	gap: 20px;
