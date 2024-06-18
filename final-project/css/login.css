@@ -20,18 +20,14 @@ body {
 	gap: 20px;
 }
 
-.login-title {
-	font-size: 30px;
-	text-align: center;
-	font-weight: bold;
-	padding: 20px 0;
+.logo-container img {
+	width: 200px;
 }
 
 .login-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 10px;
 	width: 300px;
 }
 
@@ -43,16 +39,18 @@ body {
 	color: #000000;
 	width: 100%;
 	padding: 10px;
+	margin-top: 10px;
 	border: 1px solid #898989;
 	border-radius: 6px;
 	font-size: 14px;
 	outline: none;
 }
-
 .login-content > input:focus {
 	border-color: #35c5f0;
 }
-
+.login-error {
+	padding: 2px;
+}
 /* 로그인 버튼 */
 .login-btn {
 	width: 100%;
@@ -64,10 +62,11 @@ body {
 	border-radius: 5px;
 	font-size: 16px;
 	font-weight: bold;
+	margin-top: 10px;
 }
-
-.login-btn:hover {
-	background-color: #07b8ee;
+.login-btn:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
 }
 
 /* 아이디 저장 체크박스 */
