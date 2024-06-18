@@ -211,3 +211,53 @@ select {
 .ads img:hover {
 	cursor: pointer;
 }
+
+/* 도서 상세정보 */
+.book-detail-container {
+	margin: 20px 0 40px;
+}
+
+/* 도서 상새 정보 내용 */
+.book-detail-content-container {
+	padding: 0 20px 40px 20px;
+}
+.book-detail-content h3 {
+	font-size: 26px;
+	font-weight: bold;
+	padding-top: 30px;
+}
+.book-detail-content p,
+.book-detail-content pre {
+	font-size: 16px;
+	padding-top: 10px;
+	line-height: 1.4;
+}
+.book-info-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.book-info-table th,
+.book-info-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.book-info-table th {
+	background-color: #f9f9f9;
+}
+
+.book-info-table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.book-info-table tr:hover {
+	background-color: #ddd;
+}
+
+.book-detail-content pre {
+	text-align: left;
+	white-space: pre-wrap;
+}

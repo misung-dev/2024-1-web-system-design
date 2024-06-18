@@ -3,6 +3,11 @@ document.querySelectorAll(".book-img-sub img").forEach(function (img) {
 	img.addEventListener("mouseover", function () {
 		document.getElementById("main-img").src = this.src;
 	});
+	img.addEventListener("mouseout", function () {
+		document.getElementById("main-img").src = document
+			.getElementById("main-img")
+			.getAttribute("data-original-src");
+	});
 });
 
 // 링크 외부로 공유
@@ -37,4 +42,16 @@ function buyNow() {
 	if (userConfirmed) {
 		window.location.href = "pay.html";
 	}
+}
+
+// 메뉴 클릭시 해당 화면이 위로 올라오는 효과
+function scrollToSection(id) {
+	const section = document.getElementById(id);
+	const headerHeight = document.querySelector(".header").offsetHeight;
+	const additionalOffset = -100;
+
+	window.scrollTo({
+		top: section.offsetTop - headerHeight - additionalOffset,
+		behavior: "smooth",
+	});
 }
