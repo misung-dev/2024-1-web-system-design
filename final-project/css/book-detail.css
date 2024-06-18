@@ -1,0 +1,148 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.book-info {
+	display: flex;
+}
+.book-info .book-img-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.book-info .book-img-container .book-img-main {
+	display: flex;
+	height: 300px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.book-info .book-img-container .book-img-main img {
+	width: auto;
+	height: 100%;
+}
+.book-info .book-img-container .book-img-sub {
+	display: flex;
+	height: 60px;
+	width: 100%;
+	gap: 4px;
+}
+.book-info .book-img-container .book-img-sub img {
+	width: calc(33.33% - 1.33px);
+	height: 100%;
+}
+
+.book-details {
+	margin-left: 30px;
+	width: 100%;
+}
+.book-title {
+	padding: 10px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+.book-author {
+	margin-bottom: 20px;
+	color: #636363;
+	font-size: 14px;
+}
+.book-price-quantity-info {
+	display: flex;
+	padding: 10px 0;
+	flex-direction: column;
+	gap: 20px;
+	font-size: 16px;
+}
+.price {
+	display: flex;
+}
+.quantity-container {
+	display: flex;
+	align-items: center;
+}
+select {
+	width: 40px;
+	font-size: 16px;
+}
+.price span:first-child,
+.quantity-container label {
+	width: 100px;
+}
+
+/* 배송 일정 정보 */
+.arrival-date {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+	margin-right: 20px;
+	padding: 10px;
+	background-color: #f0f0f0;
+	border-radius: 4px;
+	color: #636363;
+	font-size: 14px;
+	font-weight: bold;
+}
+.arrival-date img {
+	width: 14px;
+	margin-right: 6px;
+}
+.arrival-date span {
+	color: #35c5f0;
+	margin-right: 6px;
+}
+.arrival-date .arrival-date-notice {
+	margin-left: auto;
+}
+
+/* 장바구니, 바로구매 버튼 */
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-right: 20px;
+}
+.buttons button {
+	width: 48%;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.buttons .cart {
+	width: 100%;
+	height: 40px;
+	background-color: #ffffff;
+	cursor: pointer;
+	color: #35c5f0;
+	border: 1px solid #35c5f0;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.buttons .buy-now {
+	width: 100%;
+	height: 40px;
+	background-color: #35c5f0;
+	color: #ffffff;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.buttons .buy-now:hover {
+	background-color: #07b8ee;
+}
+
+/* 광고 배너 */
+.ads {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+.ads img {
+	width: 48%;
+}

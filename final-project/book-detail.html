@@ -3,11 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WeBS | 도서 상세페이지</title>
+		<title>WeBS | 도서 상세</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="./css/book-list.css" />
 		<link rel="stylesheet" href="./css/book-detail.css" />
-		<script src="./js/book-detail.js" defer></script>
+		<script src="./js/main.js" defer></script>
+		<script src="./js/book-list.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -16,11 +19,10 @@
 				<a href="shopping-basket.html">장바구니</a>
 				<a href="purchase-history.html">구매내역 조회</a>
 			</div>
-
 			<div class="logo-search-bar-container">
 				<div class="logo">
 					<a href="main.html">
-						<img src="./src/img/logo.png" alt="로고이미지" />
+						<img src="./src/img/logo-dark.png" alt="로고이미지" />
 					</a>
 				</div>
 				<div class="search-bar">
@@ -35,7 +37,6 @@
 					</button>
 				</div>
 			</div>
-
 			<nav class="sub-menu">
 				<div class="find-a-book-field">
 					<a href="#">도서 분야 찾기</a>
@@ -45,6 +46,105 @@
 					<a href="faq.html">자주 묻는 질문</a>
 				</div>
 			</nav>
-  
-</body>
+		</header>
+		<div class="content-container">
+			<aside class="sidebar">
+				<li class="book-category">도서 분야</li>
+				<ul>
+					<li>
+						<a href="#" onclick="toggleSubmenu('koreanBooks')">
+							<span class="toggle-icon" id="koreanBooksIcon">+</span> 국내 도서
+						</a>
+					</li>
+					<ul id="koreanBooks" class="submenu">
+						<li>경영/경제</li>
+						<li>사회/정치</li>
+						<li>소설/시/희곡</li>
+						<li>역사</li>
+						<li>예술</li>
+						<li>자연/과학</li>
+						<li>IT/모바일</li>
+					</ul>
+					<li>
+						<a href="#" onclick="toggleSubmenu('foreignBooks')">
+							<span class="toggle-icon" id="foreignBooksIcon">+</span> 외국 도서
+						</a>
+					</li>
+					<ul id="foreignBooks" class="submenu">
+						<li>경영/경제</li>
+						<li>사회/정치</li>
+						<li>소설/시/희곡</li>
+						<li>역사</li>
+						<li>예술</li>
+						<li>자연/과학</li>
+						<li>IT/모바일</li>
+					</ul>
+					<li>
+						<a href="#" onclick="toggleSubmenu('ebooks')">
+							<span class="toggle-icon" id="ebooksIcon">+</span> eBook
+						</a>
+					</li>
+					<ul id="ebooks" class="submenu">
+						<li>경영/경제</li>
+						<li>사회/정치</li>
+						<li>소설/시/희곡</li>
+						<li>역사</li>
+						<li>예술</li>
+						<li>자연/과학</li>
+						<li>IT/모바일</li>
+					</ul>
+					<li>
+						<a href="#"><span class="toggle-icon" id="foreignBooksIcon">-</span> 티켓</a>
+					</li>
+				</ul>
+			</aside>
+			<main class="main-content">
+				<article class="book-info">
+					<div class="book-img-container">
+						<div class="book-img-main">
+							<img src="./database/book_img/미움받을 용기.jpeg" alt="Book Cover" />
+						</div>
+						<div class="book-img-sub">
+							<img src="./database/book_img/미움받을 용기.jpeg" alt="Book Cover" />
+							<img src="./database/book_img/미움받을 용기.jpeg" alt="Book Cover" />
+							<img src="./database/book_img/미움받을 용기.jpeg" alt="Book Cover" />
+						</div>
+					</div>
+					<div class="book-details">
+						<div class="book-title">질병 해방</div>
+						<div class="book-author">피터 아티야 지음, 이한음 (옮긴이)</div>
+						<div class="book-price-quantity-info">
+							<div class="price"><span>정가</span><span class="price-won">28,000원</span></div>
+							<div class="price"><span>전자책</span><span class="price-won">18,000원</span></div>
+							<div class="quantity-container">
+								<label for="quantity">수량</label>
+								<select id="quantity">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+								</select>
+							</div>
+						</div>
+						<div class="arrival-date">
+							<img src="./src/icon/free-icon-font-truck-side.png" alt="" /><span>5/28(화)</span>도착
+							예정
+							<img
+								src="./src/icon/free-icon-font-comment-exclamation.png"
+								alt="정보"
+								class="arrival-date-notice"
+							/>
+						</div>
+						<div class="buttons">
+							<button class="cart">장바구니</button>
+							<button class="buy-now">바로구매</button>
+						</div>
+					</div>
+				</article>
+				<section class="ads">
+					<img src="./src/img/book-detail-ad-banner-1.jpeg" alt="Ad 1" />
+					<img src="./src/img/book-detail-ad-banner-2.jpeg" alt="Ad 2" />
+				</section>
+			</main>
+		</div>
+	</body>
 </html>
