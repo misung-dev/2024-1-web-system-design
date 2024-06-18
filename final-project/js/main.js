@@ -23,6 +23,43 @@ document.getElementById("to-top").addEventListener("click", function () {
 	});
 });
 
+// badges 하단으로 이동하면 사라지는 효과 적용
+const badgeEl = document.querySelector("header .badges");
+const toTopEl = document.querySelector("#to-top");
+
+window.addEventListener(
+	"scroll",
+	_.throttle(function () {
+		const scrollY = window.scrollY;
+		console.log(scrollY);
+		if (scrollY > 800) {
+			gsap.to(badgeEl, 0.6, {
+				opacity: 0,
+				y: 200,
+				onComplete: function () {
+					badgeEl.style.display = "none";
+				},
+			});
+			gsap.to(toTopEl, 0.6, {
+				opacity: 1,
+				backgroundColor: "#fff",
+				border: "1px solid gray",
+			});
+		} else {
+			badgeEl.style.display = "block";
+			gsap.to(badgeEl, 0.6, {
+				opacity: 1 - scrollY / 800,
+				y: 0,
+			});
+			gsap.to(toTopEl, 0.6, {
+				opacity: 0,
+				backgroundColor: "transparent",
+				border: "none",
+			});
+		}
+	}, 300)
+);
+
 // FOOTER Swiper
 document.addEventListener("DOMContentLoaded", function () {
 	const swiperWrapper = document.querySelector(".swiper-wrapper");

@@ -6,10 +6,11 @@ body {
 
 /* badge */
 header .badges {
-	position: absolute;
+	position: fixed;
 	top: 200px;
 	right: 12px;
 	z-index: 10;
+	transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 header .badges .badge {
