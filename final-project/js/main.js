@@ -88,3 +88,25 @@ setInterval(() => {
 document.addEventListener("DOMContentLoaded", () => {
 	updateDots();
 });
+
+// 광고 배너(우측 하단)
+document.addEventListener("DOMContentLoaded", function () {
+	const closeButton = document.querySelector(".ad-container .footer button");
+	const adContainer = document.querySelector(".ad-container");
+
+	closeButton.addEventListener("click", function () {
+		adContainer.style.display = "none";
+	});
+});
+
+// 뱃지 삭제 기능
+document.addEventListener("DOMContentLoaded", function () {
+	const closeButtons = document.querySelectorAll(".badge .close-btn");
+
+	closeButtons.forEach((button) => {
+		button.addEventListener("click", function () {
+			const badge = this.closest(".badge");
+			badge.remove();
+		});
+	});
+});
