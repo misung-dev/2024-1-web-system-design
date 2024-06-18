@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-	// 자세히보기 클릭시 해당 페이지로 이동
 	const btnMore = document.getElementById("btn-more");
 	if (btnMore) {
 		btnMore.addEventListener("click", function () {
-			window.location.href = "/final-project/ebook.html"; // 경로가 올바른지 확인
+			window.location.href = "/final-project/ebook.html";
 		});
 	}
 
@@ -20,23 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
-	});
-
-	// FOOTER Swiper
-	document.addEventListener("DOMContentLoaded", function () {
-		var swiper = new Swiper(".swiper-container", {
-			slidesPerView: 4,
-			spaceBetween: 10,
-			loop: true,
-			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false,
-			},
-			navigation: {
-				nextEl: ".swiper-next",
-				prevEl: ".swiper-prev",
-			},
-		});
 	});
 
 	// badges 하단으로 이동하면 사라지는 효과 적용

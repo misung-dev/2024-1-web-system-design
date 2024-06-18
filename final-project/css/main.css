@@ -137,6 +137,7 @@ header .badges .badge {
 
 .notice .inner__left h2 {
 	margin-right: 30px;
+	width: 100px;
 }
 
 .notice .inner__right {
@@ -384,46 +385,6 @@ footer .logo-container img {
 }
 
 /* AWARDS */
-.awards {
-	display: flex;
-	background-color: #272727;
-	color: #fff;
-	padding: 20px 40px;
-	max-width: 1100px;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
-}
-
-.awards .swiper-container {
-	overflow: hidden;
-	display: flex;
-}
-
-.awards .swiper-slide {
-	flex: 0 0 auto;
-	width: calc((100% / 4) - 20px);
-}
-
-.awards .swiper-prev,
-.awards .swiper-next {
-	display: flex;
-	justify-content: center;
-	cursor: pointer;
-	z-index: 10;
-}
-
-.awards .swiper-prev {
-	left: 0;
-}
-
-.awards .swiper-next {
-	right: 0;
-}
-
-.awards img {
-	height: 100%;
-}
 
 #to-top {
 	display: flex;
