@@ -220,3 +220,14 @@ body {
 	color: #35c5f0;
 	font-weight: bold;
 }
+
+.logo-container img {
+	width: 200px;
+}
+
+.login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+}
