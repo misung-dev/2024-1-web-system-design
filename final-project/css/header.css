@@ -8,14 +8,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/* padding: 10px; */
 }
 
 .menu {
 	display: flex;
 	gap: 20px;
 	font-size: 14px;
-	margin: 20px 10px 10px 10px;
+	margin: 10px 10px 0 10px;
 	margin-left: auto;
 }
 
@@ -24,16 +23,17 @@ body {
 	color: black;
 }
 
+/* 로고 */
 .logo-search-bar-container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 20px;
-	padding: 10px;
+	padding-bottom: 10px;
 }
 
 .logo img {
-	width: 120px;
+	width: 140px;
 }
 
 /* 검색창 */
