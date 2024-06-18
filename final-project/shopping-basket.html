@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>WeBS | 장바구니</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
 		<link rel="stylesheet" href="./css/shopping-basket.css" />
 		<link rel="stylesheet" href="./css/header.css" />
-		<script src="./js/shopping-basket.js" dfer></script>
+		<script src="./js/shopping-basket.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -56,23 +56,61 @@
 				<div class="product-list">
 					<div class="product">
 						<input type="checkbox" data-price="18000" />
-						<img src="./src/img/product-1.jpg" alt="질병 해방" />
+						<img src="./database/book_img/언어의 온도.jpeg" alt="언어의 온도" />
 						<div class="product-info">
-							<h3>질병 해방</h3>
+							<h3>언어의 온도 / 이기주</h3>
 							<p>18,000원</p>
 							<input type="number" value="1" min="1" />
 						</div>
 					</div>
 					<div class="product">
-						<input type="checkbox" data-price="18000" />
-						<img src="./src/img/product-2.jpg" alt="바르다 손글씨" />
+						<input type="checkbox" data-price="7000" />
+						<img src="./database/book_img/세이노의 가르침.jpeg" alt=">세이노의 가르침" />
 						<div class="product-info">
-							<h3>바르다 손글씨</h3>
-							<p>18,000원</p>
+							<h3>세이노의 가르침 / 세이노</h3>
+							<p>7,000원</p>
+							<input type="number" value="1" min="1" />
+						</div>
+					</div>
+					<div class="product">
+						<input type="checkbox" data-price="10000" />
+						<img src="./database/book_img/아몬드.jpeg" alt="아몬드" />
+						<div class="product-info">
+							<h3>아몬드 / 손원평</h3>
+							<p>10,000원</p>
+							<input type="number" value="1" min="1" />
+						</div>
+					</div>
+					<div class="product">
+						<input type="checkbox" data-price="13000" />
+						<img src="./database/book_img/달러구트 꿈 백화점.jpeg" alt="달러구트 꿈 백화점1" />
+						<div class="product-info">
+							<h3>달러구트 꿈 백화점1 / 이미예</h3>
+							<p>13,000원</p>
+							<input type="number" value="1" min="1" />
+						</div>
+					</div>
+					<div class="product">
+						<input type="checkbox" data-price="14000" />
+						<img src="./database/book_img/리틀 라이프.jpeg" alt="리틀 라이프" />
+						<div class="product-info">
+							<h3>리틀 라이프 / 한야야나기하라</h3>
+							<p>14,000원</p>
+							<input type="number" value="1" min="1" />
+						</div>
+					</div>
+					<div class="product">
+						<input type="checkbox" data-price="14000" />
+						<img src="./database/book_img/행동의 힘.jpeg" alt="행동의 힘" />
+						<div class="product-info">
+							<h3>행동의 힘 / 유선국</h3>
+							<p>14,000원</p>
 							<input type="number" value="1" min="1" />
 						</div>
 					</div>
 				</div>
+
+				<!-- 체크한 항목 -->
 				<div class="summary">
 					<p><span>상품 총 금액</span><span id="total-price">0원</span></p>
 					<p><span>배송비</span><span id="shipping-fee">0원</span></p>
@@ -84,6 +122,5 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/shopping-basket.js"></script>
 	</body>
 </html>
