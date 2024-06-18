@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	checkoutButton.addEventListener("click", (event) => {
 		event.preventDefault();
-		if (confirm("결제하시겠습니까?")) {
+		if (confirm("결제화면으로 이동하시겠습니까?")) {
+			window.location.href = "pay.html";
 		}
 	});
 
@@ -46,17 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			shippingFeeElement.innerText = "0원";
 		} else {
 			shippingFeeElement.innerText = "3,000원";
-			totalPrice += 3000; // 배송비 추가
+			totalPrice += 3000;
 		}
 
 		productListSummary.innerHTML = productListHtml;
 		totalPriceElement.innerText = `${totalPrice.toLocaleString()}원`;
 
-		// 결제하기 버튼 활성화/비활성화
 		checkoutButton.disabled = !hasCheckedItems;
 		checkoutButton.classList.toggle("disabled", !hasCheckedItems);
 	}
 
-	// 초기 상태를 확인하여 결제하기 버튼 설정
 	updateSummary();
 });
