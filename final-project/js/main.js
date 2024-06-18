@@ -1,3 +1,4 @@
+// 공지사항
 document.addEventListener("DOMContentLoaded", function () {
 	const swiper = new Swiper(".swiper-container", {
 		direction: "vertical",
@@ -11,6 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
+	});
+});
+
+// 페이지 상단으로 이동하는 아이콘
+document.getElementById("to-top").addEventListener("click", function () {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth",
 	});
 });
 
