@@ -11,6 +11,11 @@
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+		<!-- SWIPER -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+		<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+		<script src="./js/header.js" defer></script>
 		<script src="./js/main.js" defer></script>
 	</head>
 	<body>
@@ -43,46 +48,30 @@
 
 			<nav class="sub-menu">
 				<div class="find-a-book-field">
-					<img src="./src/icon/free-icon-font-menu-burger.svg" alt="" />
+					<img src="./src/icon/free-icon-font-menu-burger.svg" alt="햄버거 메뉴" />
 					<a href="#">도서 분야 찾기</a>
-					<div class="sub-menu-category">
-						<div class="menu-item">
-							<a href="#">국내 도서</a>
-							<div class="sub-sub-menu">
-								<a href="#">경영/경제</a>
-								<a href="#">사회/정치</a>
-								<a href="#">소설/시/희곡</a>
-								<a href="#">역사</a>
-								<a href="#">예술</a>
-								<a href="#">자연/과학</a>
-								<a href="#">IT/모바일</a>
+					<div class="sub-menu-category-container">
+						<div class="sub-menu-category">
+							<div class="menu-item">
+								<a href="book-list.html">국내 도서</a>
 							</div>
-						</div>
-						<div class="menu-item">
-							<a href="#">외국 도서</a>
-							<div class="sub-sub-menu">
-								<a href="#">경영/경제</a>
-								<a href="#">사회/정치</a>
-								<a href="#">소설/시/희곡</a>
-								<a href="#">역사</a>
-								<a href="#">예술</a>
-								<a href="#">자연/과학</a>
-								<a href="#">IT/모바일</a>
+							<div class="menu-item">
+								<a href="book-list.html">외국 도서</a>
 							</div>
-						</div>
-						<div class="menu-item">
-							<a href="#">eBook</a>
-							<div class="sub-sub-menu">
-								<a href="#">경영/경제</a>
-								<a href="#">사회/정치</a>
-								<a href="#">소설/시/희곡</a>
-								<a href="#">역사</a>
-								<a href="#">예술</a>
-								<a href="#">자연/과학</a>
-								<a href="#">IT/모바일</a>
+							<div class="menu-item">
+								<a href="book-list.html">eBook</a>
 							</div>
+							<a href="book-list.html">티켓</a>
 						</div>
-						<a href="#">티켓</a>
+						<div class="shared-sub-menu sub-sub-menu">
+							<a href="book-list.html">경영/경제</a>
+							<a href="book-list.html">사회/정치</a>
+							<a href="book-list.html">소설/시/희곡</a>
+							<a href="book-list.html">역사</a>
+							<a href="book-list.html">예술</a>
+							<a href="book-list.html">자연/과학</a>
+							<a href="book-list.html">IT/모바일</a>
+						</div>
 					</div>
 				</div>
 
@@ -104,12 +93,30 @@
 		</header>
 
 		<section class="visual">
+			<div class="carousel">
+				<div class="carousel-images">
+					<div class="carousel-item">
+						<img src="./src/img/library-1.avif" alt="" />
+					</div>
+					<div class="carousel-item">
+						<img src="./src/img/library-2.avif" alt="" />
+					</div>
+					<div class="carousel-item">
+						<img src="./src/img/library-3.avif" alt="" />
+					</div>
+				</div>
+			</div>
 			<div class="title-container">
 				<h3>책, 그 이상의 가치</h3>
 				<h1>WeBS<br />전자도서관</h1>
 			</div>
 			<div class="btn-more">
 				<a class="btn" id="btn-more">자세히 보기</a>
+			</div>
+			<div class="carousel-dots">
+				<span class="dot" onclick="currentSlide(0)"></span>
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
 			</div>
 		</section>
 
@@ -145,38 +152,39 @@
 				<img src="./src/icon/free-icon-font-angle-circle-left.png" alt="" />
 			</div>
 			<div class="swiper-container">
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-1.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-2.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-3.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-4.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-5.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-6.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-7.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-8.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-9.jpg" alt="awards" />
-				</div>
-				<div class="swiper-slide">
-					<img src="./src/img/awards-slide-10.jpg" alt="awards" />
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-1.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-2.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-3.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-4.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-5.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-6.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-7.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-8.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-9.jpg" alt="awards" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./src/img/awards-slide-10.jpg" alt="awards" />
+					</div>
 				</div>
 			</div>
-
 			<div class="swiper-next">
 				<img src="./src/icon/free-icon-font-angle-circle-right.png" alt="" />
 			</div>

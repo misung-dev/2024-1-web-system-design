@@ -23,37 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// FOOTER Swiper
-	const swiperWrapper = document.querySelector(".swiper-wrapper");
-	const swiperSlides = document.querySelectorAll(".swiper-slide");
-	const swiperPrev = document.querySelector(".swiper-prev");
-	const swiperNext = document.querySelector(".swiper-next");
-
-	let currentIndex = 0;
-	const slidesPerView = 4;
-	const slideWidth =
-		swiperSlides[0].offsetWidth + parseInt(getComputedStyle(swiperSlides[0]).marginRight, 10);
-
-	function updateSliderPosition() {
-		swiperWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-	}
-
-	if (swiperPrev && swiperNext) {
-		swiperPrev.addEventListener("click", function () {
-			if (currentIndex > 0) {
-				currentIndex--;
-				updateSliderPosition();
-			}
+	document.addEventListener("DOMContentLoaded", function () {
+		var swiper = new Swiper(".swiper-container", {
+			slidesPerView: 4,
+			spaceBetween: 10,
+			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: ".swiper-next",
+				prevEl: ".swiper-prev",
+			},
 		});
-
-		swiperNext.addEventListener("click", function () {
-			if (currentIndex < swiperSlides.length - slidesPerView) {
-				currentIndex++;
-				updateSliderPosition();
-			}
-		});
-	}
-
-	updateSliderPosition();
+	});
 
 	// badges 하단으로 이동하면 사라지는 효과 적용
 	const badgeEl = document.querySelector("header .badges");
@@ -92,4 +76,33 @@ document.addEventListener("DOMContentLoaded", function () {
 			}, 300)
 		);
 	}
+});
+
+let currentIndex = 0;
+
+function showSlide(index) {
+	const carouselImages = document.querySelector(".carousel-images");
+	currentIndex = index;
+	carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+	updateDots();
+}
+
+function updateDots() {
+	const dots = document.querySelectorAll(".dot");
+	dots.forEach((dot, index) => {
+		dot.classList.toggle("active", index === currentIndex);
+	});
+}
+
+function currentSlide(index) {
+	showSlide(index);
+}
+
+setInterval(() => {
+	currentIndex = (currentIndex + 1) % 3;
+	showSlide(currentIndex);
+}, 5000);
+
+document.addEventListener("DOMContentLoaded", () => {
+	updateDots();
 });
