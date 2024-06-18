@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const passwordInput = document.querySelector('.login-content input[type="password"]');
 	const loginContainer = document.querySelector(".login-container");
 
-	// 경고 문구 성성
+	// 경고 문구 생성
 	const warningMessage = document.createElement("p");
 	warningMessage.textContent = "아이디/비밀번호를 다시 확인해 주세요";
 	warningMessage.style.color = "#ff7777";
@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	idInput.addEventListener("input", validateInputs);
 	passwordInput.addEventListener("input", validateInputs);
+
+	loginButton.addEventListener("click", function () {
+		alert("아이디/비밀번호가 틀렸습니다. 다시 확인해 주세요.");
+		idInput.value = "";
+		passwordInput.value = "";
+		validateInputs();
+	});
 
 	validateInputs();
 });
