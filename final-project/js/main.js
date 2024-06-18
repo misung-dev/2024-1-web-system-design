@@ -13,3 +13,37 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 });
+
+// FOOTER Swiper
+document.addEventListener("DOMContentLoaded", function () {
+	const swiperWrapper = document.querySelector(".swiper-wrapper");
+	const swiperSlides = document.querySelectorAll(".swiper-slide");
+	const swiperPrev = document.querySelector(".swiper-prev");
+	const swiperNext = document.querySelector(".swiper-next");
+
+	let currentIndex = 0;
+	const slidesPerView = 4; // Number of slides per view
+	const slideWidth =
+		swiperSlides[0].offsetWidth + parseInt(getComputedStyle(swiperSlides[0]).marginRight, 10);
+
+	function updateSliderPosition() {
+		swiperWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+	}
+
+	swiperPrev.addEventListener("click", function () {
+		if (currentIndex > 0) {
+			currentIndex--;
+			updateSliderPosition();
+		}
+	});
+
+	swiperNext.addEventListener("click", function () {
+		if (currentIndex < swiperSlides.length - slidesPerView) {
+			currentIndex++;
+			updateSliderPosition();
+		}
+	});
+
+	// Initial call to set the position correctly
+	updateSliderPosition();
+});
