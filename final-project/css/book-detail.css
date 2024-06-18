@@ -32,10 +32,24 @@ body {
 	border-radius: 50%;
 	padding: 6px;
 	margin-right: 14px;
+	cursor: pointer;
 }
 .top-badge-share img {
 	width: 12px;
 	height: 12px;
+}
+
+.copy-notification {
+	display: none;
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #35c5f0;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 14px;
 }
 
 /* 도서 정보 (이미지, 가격 정보 등) */
