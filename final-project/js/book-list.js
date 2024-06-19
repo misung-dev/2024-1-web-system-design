@@ -8,23 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	const submenuLinks = document.querySelectorAll(".submenu a");
+	// URL 파라미터를 읽어 카테고리와 서브카테고리를 추출
+	const urlParams = new URLSearchParams(window.location.search);
+	const category = urlParams.get("category");
+	const subcategory = urlParams.get("subcategory");
 
-	submenuLinks.forEach((link) => {
-		link.addEventListener("click", (event) => {
-			event.preventDefault();
-			const category = link.getAttribute("data-category");
-			const subcategory = link.textContent;
-
-			submenuLinks.forEach((subLink) => subLink.classList.remove("selected"));
-
-			link.classList.add("selected");
-
-			loadBooks(category, subcategory);
-		});
-	});
-
-	loadBooks("all");
+	// 카테고리와 서브카테고리가 존재하면 해당 도서 목록을 로드, 그렇지 않으면 모든 도서 목록을 로드
+	if (category && subcategory) {
+		loadBooks(category, subcategory);
+	} else {
+		loadBooks("all");
+	}
 });
 
 function toggleSubmenu(id) {
