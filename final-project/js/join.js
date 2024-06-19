@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				input.parentElement.querySelector(".positive-message").textContent = positiveMessage;
 			}
 		} else if (input.id === "id") {
-			const idRegex = /^[a-zA-Z0-9]{5,10}$/;
+			const idRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{5,10}$/;
 			const positiveMessage = "멋진 아이디입니다!";
 			if (value === "") {
 				valid = false;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (showError) {
 					input.parentElement.classList.add("error");
 					input.parentElement.querySelector(".error-message").textContent =
-						"아이디는 영어와 숫자 조합으로 5-10자 사이여야 합니다.";
+						"아이디는 영어와 숫자를 포함하여 5-10자 사이여야 합니다.";
 				}
 			} else {
 				input.parentElement.classList.remove("error");
@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					input.parentElement.querySelector(".error-message").textContent =
 						"비밀번호가 일치하지 않습니다.";
 				}
+				input.parentElement.querySelector(".positive-message").textContent = "";
 			} else {
 				input.parentElement.classList.remove("error");
 				input.parentElement.querySelector(".error-message").textContent = "";
