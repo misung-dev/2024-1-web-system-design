@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>로그인</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
-    <link rel="stylesheet" href="./css/login.css" />
-    <script src="./js/login.js" defer /></script>
+		<link rel="stylesheet" href="./css/login.css" />
+		<script src="./js/login.js" defer></script>
 	</head>
 	<body>
 		<div class="login-box">
 			<div class="logo-container">
-				<img src="/final-project/src/img/logo-dark.png" alt="로고이미지">
+				<img src="/final-project/src/img/logo-dark.png" alt="로고이미지" />
 			</div>
 			<div class="login-container">
 				<div class="login-content">
-					<input type="text" placeholder="아이디를 입력해 주세요" />
+					<input type="text" id="id-input" placeholder="아이디를 입력해 주세요" />
 				</div>
 				<div class="login-content">
-					<input type="password" placeholder="비밀번호를 입력해 주세요" />
+					<input type="password" id="password-input" placeholder="비밀번호를 입력해 주세요" />
 				</div>
 				<p class="login-error"></p>
-				<button class="login-btn">로그인</button>
+				<button class="login-btn" id="login-btn">로그인</button>
 
 				<label class="save-id-container">
-					<input type="checkbox" class="custom-checkbox">
+					<input type="checkbox" id="save-id-checkbox" class="custom-checkbox" />
 					<p>아이디 저장</p>
 				</label>
 			</div>
-
-      <div class="join-container">
-        <a href="./join.html" class="join-btn">회원가입</a>
-      </div>
+			<div class="join-container">
+				<a href="./join.html" class="join-btn">회원가입</a>
+			</div>
 		</div>
 	</body>
 </html>
