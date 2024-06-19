@@ -51,14 +51,8 @@ body {
 }
 
 .sidebar ul li a.selected {
-	background-color: #35c5f0;
-	color: #fff;
 	padding: 6px;
 	border-radius: 4px;
-}
-
-.sidebar ul li a.selected:hover {
-	color: #fff;
 }
 
 .submenu {
@@ -182,7 +176,6 @@ body {
 }
 
 .selected {
-	background-color: #35c5f0;
 	color: #fff;
 	padding: 6px;
 	border-radius: 4px;
