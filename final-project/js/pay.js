@@ -32,7 +32,6 @@ document.getElementById("used-points").addEventListener("input", function () {
 	totalPriceElement.textContent = formatNumber(totalPrice);
 	remainingPointsElement.textContent = formatNumber(remainingPoints);
 
-	// 사용 포인트 필드에 콤마 추가
 	usedPointsElement.value = formatNumber(usedPoints).replace("원", "");
 });
 
@@ -41,7 +40,9 @@ document.getElementById("checkout-button").addEventListener("click", function (e
 	const finalPriceElement = document.getElementById("final-price");
 	const finalPrice = finalPriceElement.textContent.replace(/,/g, "").replace("원", "");
 
-	const userConfirmed = confirm(finalPrice + "원을 결제 하시겠습니까?");
+	const formattedPrice = Number(finalPrice).toLocaleString();
+
+	const userConfirmed = confirm(formattedPrice + "원을 결제 하시겠습니까?");
 	if (userConfirmed) {
 		alert("결제가 완료되어, 구매내역 조회 페이지로 이동합니다.");
 		window.location.href = "purchase-history.html";

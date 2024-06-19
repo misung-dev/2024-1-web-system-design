@@ -5,8 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WeBS | 구매내역</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
-		<link rel="stylesheet" href="./css/purchase-history.css" />
-		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="/final-project/css/purchase-history.css" />
+		<link rel="stylesheet" href="/final-project/css/header.css" />
+		<script src="/final-project/js/purchase-history.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -20,7 +21,7 @@
 			<div class="logo-search-bar-container">
 				<div class="logo">
 					<a href="main.html">
-						<img src="./src/img/logo-dark.png" alt="로고이미지" />
+						<img src="/final-project/src/img/logo-dark.png" alt="로고이미지" />
 					</a>
 				</div>
 				<div class="search-bar">
@@ -28,6 +29,7 @@
 						<option value="국내 도서">국내 도서</option>
 						<option value="외국 도서">외국 도서</option>
 						<option value="ebook">eBook</option>
+						<option value="티켓">티켓</option>
 					</select>
 					<input type="text" placeholder="검색어를 입력해주세요." />
 					<button type="submit">
@@ -99,8 +101,8 @@
 					<p class="order-total">총 30,000원</p>
 				</div>
 				<div class="order-actions">
-					<button>구매 확정하기</button>
-					<button>환불 신청하기</button>
+					<button id="confirm-button">구매 확정하기</button>
+					<button id="refund-button">환불 신청하기</button>
 				</div>
 			</div>
 
@@ -128,7 +130,7 @@
 					<p class="order-total">총 45,000원</p>
 				</div>
 				<div class="order-actions">
-					<button class="purchase-completed">구매 확정</button>
+					<button class="purchase-completed">구매 확정 완료</button>
 				</div>
 			</div>
 		</div>

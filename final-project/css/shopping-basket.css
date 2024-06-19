@@ -34,10 +34,12 @@ h1 {
 }
 .product-info {
 	flex-grow: 1;
+	line-height: 1.6;
 }
 .product-info h3 {
 	margin: 0 0 10px;
 	font-size: 18px;
+	font-weight: bold;
 }
 .product-info p {
 	margin: 5px 0;

@@ -256,8 +256,3 @@ select {
 .book-info-table tr:hover {
 	background-color: #ddd;
 }
-
-.book-detail-content pre {
-	text-align: left;
-	white-space: pre-wrap;
-}
