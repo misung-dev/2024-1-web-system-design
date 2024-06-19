@@ -87,6 +87,7 @@ function loadBooks(category, subcategory) {
 				bookPrice.classList.add("book-price");
 				bookPrice.textContent = book.price;
 
+				// 각 요소에 클릭 이벤트 추가
 				[bookImageContainer, bookTitle, bookAuthor, bookPrice].forEach((element) => {
 					element.addEventListener("click", () => {
 						window.location.href = "book-detail.html";
@@ -102,4 +103,14 @@ function loadBooks(category, subcategory) {
 			});
 		})
 		.catch((error) => console.error("Error fetching the book data:", error));
+}
+
+function navigateToCategory(event, category) {
+	event.preventDefault();
+	window.location.href = `book-list.html?category=${category}`;
+}
+
+function navigateToSubcategory(event, category, subcategory) {
+	event.preventDefault();
+	window.location.href = `book-list.html?category=${category}&subcategory=${subcategory}`;
 }
