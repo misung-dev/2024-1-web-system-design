@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="./css/header.css" />
 		<link rel="stylesheet" href="./css/book-list.css" />
 		<script src="./js/book-list.js" defer></script>
-		--
 	</head>
 	<body>
 		<header class="header">
@@ -85,50 +84,115 @@
 				<li class="book-category">도서 분야</li>
 				<ul>
 					<li>
-						<a href="#" onclick="toggleSubmenu('koreanBooks')"
-							><span class="toggle-icon" id="koreanBooksIcon">+</span> 국내 도서</a
-						>
+						<a href="#" data-category="domestic" onclick="toggleSubmenu('koreanBooks')">
+							<span class="toggle-icon" id="koreanBooksIcon">+</span> 국내 도서
+						</a>
 					</li>
 					<ul id="koreanBooks" class="submenu">
-						<li>경영/경제</li>
-						<li>사회/정치</li>
-						<li>소설/시/희곡</li>
-						<li>역사</li>
-						<li>예술</li>
-						<li>자연/과학</li>
-						<li>IT/모바일</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', '경영/경제')"
+								>경영/경제</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', '사회/정치')"
+								>사회/정치</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', '소설/시/희곡')"
+								>소설/시/희곡</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', '역사')">역사</a>
+						</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', '예술')">예술</a>
+						</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', '자연/과학')"
+								>자연/과학</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="domestic" onclick="loadBooks('domestic', 'IT/모바일')"
+								>IT/모바일</a
+							>
+						</li>
 					</ul>
 					<li>
-						<a href="#" onclick="toggleSubmenu('foreignBooks')"
-							><span class="toggle-icon" id="foreignBooksIcon">+</span> 외국 도서</a
-						>
+						<a href="#" data-category="foreign" onclick="toggleSubmenu('foreignBooks')">
+							<span class="toggle-icon" id="foreignBooksIcon">+</span> 외국 도서
+						</a>
 					</li>
 					<ul id="foreignBooks" class="submenu">
-						<li>경영/경제</li>
-						<li>사회/정치</li>
-						<li>소설/시/희곡</li>
-						<li>역사</li>
-						<li>예술</li>
-						<li>자연/과학</li>
-						<li>IT/모바일</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', '경영/경제')"
+								>경영/경제</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', '사회/정치')"
+								>사회/정치</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', '소설/시/희곡')"
+								>소설/시/희곡</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', '역사')">역사</a>
+						</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', '예술')">예술</a>
+						</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', '자연/과학')"
+								>자연/과학</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="foreign" onclick="loadBooks('foreign', 'IT/모바일')"
+								>IT/모바일</a
+							>
+						</li>
 					</ul>
 					<li>
-						<a href="#" onclick="toggleSubmenu('ebooks')"
-							><span class="toggle-icon" id="ebooksIcon">+</span> eBook</a
-						>
+						<a href="#" data-category="ebook" onclick="toggleSubmenu('ebooks')">
+							<span class="toggle-icon" id="ebooksIcon">+</span> eBook
+						</a>
 					</li>
 					<ul id="ebooks" class="submenu">
-						<li>경영/경제</li>
-						<li>사회/정치</li>
-						<li>소설/시/희곡</li>
-						<li>역사</li>
-						<li>예술</li>
-						<li>자연/과학</li>
-						<li>IT/모바일</li>
+						<li>
+							<a href="#" data-category="ebook" onclick="loadBooks('ebook', '경영/경제')"
+								>경영/경제</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="ebook" onclick="loadBooks('ebook', '사회/정치')"
+								>사회/정치</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="ebook" onclick="loadBooks('ebook', '소설/시/희곡')"
+								>소설/시/희곡</a
+							>
+						</li>
+						<li><a href="#" data-category="ebook" onclick="loadBooks('ebook', '역사')">역사</a></li>
+						<li><a href="#" data-category="ebook" onclick="loadBooks('ebook', '예술')">예술</a></li>
+						<li>
+							<a href="#" data-category="ebook" onclick="loadBooks('ebook', '자연/과학')"
+								>자연/과학</a
+							>
+						</li>
+						<li>
+							<a href="#" data-category="ebook" onclick="loadBooks('ebook', 'IT/모바일')"
+								>IT/모바일</a
+							>
+						</li>
 					</ul>
-					<li>
-						<a href="#"><span class="toggle-icon" id="foreignBooksIcon">-</span> 티켓</a>
-					</li>
 				</ul>
 			</aside>
 
