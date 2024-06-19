@@ -40,16 +40,34 @@ document.addEventListener("DOMContentLoaded", function () {
 	idInput.addEventListener("input", validateInputs);
 	passwordInput.addEventListener("input", validateInputs);
 
-	loginButton.addEventListener("click", function () {
-		alert("아이디/비밀번호가 틀렸습니다. 다시 확인해 주세요.");
-		if (saveIdCheckbox.checked) {
-			localStorage.setItem("savedId", idInput.value);
+	loginButton.addEventListener("click", function (event) {
+		event.preventDefault(); // 폼 제출 막기
+		const idValue = idInput.value.trim();
+		const passwordValue = passwordInput.value.trim();
+
+		// 로컬스토리지에서 사용자 정보 가져오기
+		const storedUser = JSON.parse(localStorage.getItem("user"));
+
+		if (storedUser && storedUser.id === idValue && storedUser.password === passwordValue) {
+			alert("로그인 성공! 메인 화면으로 이동합니다.");
+			if (saveIdCheckbox.checked) {
+				localStorage.setItem("savedId", idInput.value);
+			} else {
+				localStorage.removeItem("savedId");
+			}
+			// 메인 화면으로 이동
+			window.location.href = "main.html";
 		} else {
-			localStorage.removeItem("savedId");
-			idInput.value = "";
+			alert("아이디/비밀번호가 틀렸습니다. 다시 확인해 주세요.");
+			if (saveIdCheckbox.checked) {
+				localStorage.setItem("savedId", idInput.value);
+			} else {
+				localStorage.removeItem("savedId");
+				idInput.value = "";
+			}
+			passwordInput.value = "";
+			validateInputs();
 		}
-		passwordInput.value = "";
-		validateInputs();
 	});
 
 	saveIdCheckbox.addEventListener("change", function () {

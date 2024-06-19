@@ -205,6 +205,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		valid &= validateInput(emailDomainInput);
 
 		if (valid) {
+			const user = {
+				name: nameInput.value.trim(),
+				id: idInput.value.trim(),
+				password: passwordInput.value.trim(),
+				email: `${emailLocalInput.value.trim()}@${emailDomainInput.value.trim()}`,
+			};
+
+			localStorage.setItem("user", JSON.stringify(user));
 			alert("회원가입이 완료되었습니다! 로그인 페이지로 이동합니다!");
 			window.location.href = "login.html";
 		}
