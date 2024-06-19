@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const btnMore = document.getElementById("btn-more");
 	if (btnMore) {
 		btnMore.addEventListener("click", function () {
-			window.location.href = "/final-project/ebook.html";
+			window.location.href = "./ebook.html";
 		});
 	}
 

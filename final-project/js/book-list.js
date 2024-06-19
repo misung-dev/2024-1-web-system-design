@@ -59,15 +59,15 @@ function toggleSubmenu(id) {
 
 function loadBooks(category, subcategory) {
 	const fileMap = {
-		domestic: "/final-project/database/domestic-book-list.json",
-		foreign: "/final-project/database/foreign-book-list.json",
-		ebook: "/final-project/database/ebook-book-list.json",
+		domestic: "./database/domestic-book-list.json",
+		foreign: "./database/foreign-book-list.json",
+		ebook: "./database/ebook-book-list.json",
 	};
 
 	const allFiles = [
-		"/final-project/database/domestic-book-list.json",
-		"/final-project/database/foreign-book-list.json",
-		"/final-project/database/ebook-book-list.json",
+		"./database/domestic-book-list.json",
+		"./database/foreign-book-list.json",
+		"./database/ebook-book-list.json",
 	];
 
 	const fetchData =
