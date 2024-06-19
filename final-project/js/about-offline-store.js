@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.54993, 126.91362), "교보문고 합정점");
 	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.57138, 127.00993), "교보문고 동대문점");
 	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.63833, 127.02528), "교보문고 수유점");
-	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.562, 126.94799), "이화여대 교내서점");
+	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.562, 126.94799), "교보문고 이화여대 교내서점");
 	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.658358, 126.767049), "교보문고 일산점");
 	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.580245, 127.046422), "교보문고 청량리점");
 	createMarkerAndInfoWindow(new kakao.maps.LatLng(37.527895, 126.875168), "교보문고 목동점");

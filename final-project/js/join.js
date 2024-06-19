@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					input.parentElement.querySelector(".error-message").textContent =
 						"비밀번호는 영문, 숫자를 포함하여 8자 이상이어야 합니다.";
 				}
+				input.parentElement.querySelector(".positive-message").textContent = "";
 			} else {
 				input.parentElement.classList.remove("error");
 				input.parentElement.querySelector(".error-message").textContent = "";
