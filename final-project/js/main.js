@@ -89,16 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	updateDots();
 });
 
-// 광고 배너(우측 하단)
-document.addEventListener("DOMContentLoaded", function () {
-	const closeButton = document.querySelector(".ad-container .footer button");
-	const adContainer = document.querySelector(".ad-container");
-
-	closeButton.addEventListener("click", function () {
-		adContainer.style.display = "none";
-	});
-});
-
 // 뱃지 삭제 기능
 document.addEventListener("DOMContentLoaded", function () {
 	const closeButtons = document.querySelectorAll(".badge .close-btn");
@@ -109,4 +99,52 @@ document.addEventListener("DOMContentLoaded", function () {
 			badge.remove();
 		});
 	});
+});
+
+// 우측 하단 광고 배너
+document.addEventListener("DOMContentLoaded", function () {
+	const closeButton = document.querySelector(".ad-container .footer button");
+	const adContainer = document.querySelector(".ad-container");
+
+	closeButton.addEventListener("click", function () {
+		adContainer.style.display = "none";
+	});
+});
+
+// 우측 하단 광고 배너 (오늘 하루 보지 않기)
+function setCookie(name, value, days) {
+	const date = new Date();
+	date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+	const expires = "expires=" + date.toUTCString();
+	document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+	const nameEQ = name + "=";
+	const ca = document.cookie.split(";");
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == " ") c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
+}
+
+window.onload = function () {
+	if (getCookie("hideAd") === "true") {
+		document.getElementById("ad-container").style.display = "none";
+	}
+};
+
+document.getElementById("hide-ad-checkbox").addEventListener("change", function () {
+	if (this.checked) {
+		setCookie("hideAd", "true", 1);
+	} else {
+		setCookie("hideAd", "false", 1);
+	}
+});
+
+// "닫기" 버튼 이벤트 리스너
+document.getElementById("close-button").addEventListener("click", function () {
+	document.getElementById("ad-container").style.display = "none";
 });
