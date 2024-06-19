@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (showError) {
 					input.parentElement.classList.add("error");
 					input.parentElement.querySelector(".error-message").textContent = "필수 입력 항목입니다.";
+					input.parentElement.querySelector(".positive-message").textContent = "";
 				}
 			} else if (!nameRegex.test(value)) {
 				valid = false;
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					input.parentElement.classList.add("error");
 					input.parentElement.querySelector(".error-message").textContent =
 						"이름은 2-5 사이 한글이어야 합니다.";
+					input.parentElement.querySelector(".positive-message").textContent = "";
 				}
 			} else {
 				input.parentElement.classList.remove("error");
@@ -43,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					input.parentElement.querySelector(".error-message").textContent =
 						"아이디는 영어와 숫자를 포함하여 5-10자 사이여야 합니다.";
 				}
+				input.parentElement.querySelector(".positive-message").textContent = "";
 			} else {
 				input.parentElement.classList.remove("error");
 				input.parentElement.querySelector(".error-message").textContent = "";
