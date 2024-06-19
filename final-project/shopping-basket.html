@@ -36,6 +36,7 @@
 					</button>
 				</div>
 			</div>
+
 			<nav class="main-menu">
 				<div class="find-a-book-field">
 					<img src="./src/icon/free-icon-font-menu-burger.svg" alt="햄버거 메뉴" />
@@ -43,17 +44,17 @@
 					<div class="main-menu-category-container">
 						<div class="main-menu-category">
 							<div class="menu-item">
-								<a href="#" data-category="domestic" onclick="navigateToCategory(event, 'domestic')"
+								<a href="#" data-category="domestic" onclick="selectMainCategory(event, 'domestic')"
 									>국내 도서</a
 								>
 							</div>
 							<div class="menu-item">
-								<a href="#" data-category="foreign" onclick="navigateToCategory(event, 'foreign')"
+								<a href="#" data-category="foreign" onclick="selectMainCategory(event, 'foreign')"
 									>외국 도서</a
 								>
 							</div>
 							<div class="menu-item">
-								<a href="#" data-category="ebook" onclick="navigateToCategory(event, 'ebook')"
+								<a href="#" data-category="ebook" onclick="selectMainCategory(event, 'ebook')"
 									>eBook</a
 								>
 							</div>
@@ -62,55 +63,13 @@
 							</div>
 						</div>
 						<div class="sub-menu-category">
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="경영/경제"
-								onclick="navigateToSubcategory(event, 'domestic', '경영/경제')"
-								>경영/경제</a
-							>
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="사회/정치"
-								onclick="navigateToSubcategory(event, 'domestic', '사회/정치')"
-								>사회/정치</a
-							>
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="소설/시/희곡"
-								onclick="navigateToSubcategory(event, 'domestic', '소설/시/희곡')"
-								>소설/시/희곡</a
-							>
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="역사"
-								onclick="navigateToSubcategory(event, 'domestic', '역사')"
-								>역사</a
-							>
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="예술"
-								onclick="navigateToSubcategory(event, 'domestic', '예술')"
-								>예술</a
-							>
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="자연/과학"
-								onclick="navigateToSubcategory(event, 'domestic', '자연/과학')"
-								>자연/과학</a
-							>
-							<a
-								href="#"
-								data-category="domestic"
-								data-subcategory="IT/모바일"
-								onclick="navigateToSubcategory(event, 'domestic', 'IT/모바일')"
-								>IT/모바일</a
-							>
+							<a href="#" onclick="navigateToSubcategory(event, '경영/경제')">경영/경제</a>
+							<a href="#" onclick="navigateToSubcategory(event, '사회/정치')">사회/정치</a>
+							<a href="#" onclick="navigateToSubcategory(event, '소설/시/희곡')">소설/시/희곡</a>
+							<a href="#" onclick="navigateToSubcategory(event, '역사')">역사</a>
+							<a href="#" onclick="navigateToSubcategory(event, '예술')">예술</a>
+							<a href="#" onclick="navigateToSubcategory(event, '자연/과학')">자연/과학</a>
+							<a href="#" onclick="navigateToSubcategory(event, 'IT/모바일')">IT/모바일</a>
 						</div>
 						<div class="goods">
 							<img src="/final-project/src/img/goods.png" alt="굿즈 이미지" />

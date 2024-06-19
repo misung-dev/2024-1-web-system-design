@@ -1,3 +1,6 @@
+let selectedMainCategory = null;
+let selectedSubcategory = null;
+
 document.addEventListener("DOMContentLoaded", () => {
 	const categoryButtons = document.querySelectorAll(".category button");
 
@@ -8,14 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// URL 파라미터를 읽어 카테고리와 서브카테고리를 추출
 	const urlParams = new URLSearchParams(window.location.search);
 	const category = urlParams.get("category");
 	const subcategory = urlParams.get("subcategory");
 
-	// 카테고리와 서브카테고리가 존재하면 해당 도서 목록을 로드, 그렇지 않으면 모든 도서 목록을 로드
 	if (category && subcategory) {
 		loadBooks(category, subcategory);
+		selectedMainCategory = category;
+		selectedSubcategory = subcategory;
+		highlightMainCategory();
+		highlightSubcategory();
+		highlightSidebar();
+		openMainCategory();
 	} else {
 		loadBooks("all");
 	}
@@ -87,7 +94,6 @@ function loadBooks(category, subcategory) {
 				bookPrice.classList.add("book-price");
 				bookPrice.textContent = book.price;
 
-				// 각 요소에 클릭 이벤트 추가
 				[bookImageContainer, bookTitle, bookAuthor, bookPrice].forEach((element) => {
 					element.addEventListener("click", () => {
 						window.location.href = "book-detail.html";
@@ -105,12 +111,86 @@ function loadBooks(category, subcategory) {
 		.catch((error) => console.error("Error fetching the book data:", error));
 }
 
-function navigateToCategory(event, category) {
+function selectMainCategory(event, category) {
 	event.preventDefault();
-	window.location.href = `book-list.html?category=${category}`;
+	selectedMainCategory = category;
+	selectedSubcategory = null; // 서브카테고리 초기화
+	highlightMainCategory();
+	highlightSubcategory(); // 서브카테고리 하이라이트 초기화
 }
 
-function navigateToSubcategory(event, category, subcategory) {
+function highlightMainCategory() {
+	const mainCategoryLinks = document.querySelectorAll(".main-menu-category .menu-item");
+	mainCategoryLinks.forEach((item) => {
+		const link = item.querySelector("a");
+		if (link.getAttribute("data-category") === selectedMainCategory) {
+			item.classList.add("selected");
+		} else {
+			item.classList.remove("selected");
+		}
+	});
+}
+
+function highlightSubcategory() {
+	const subCategoryLinks = document.querySelectorAll(".sub-menu-category a");
+	subCategoryLinks.forEach((link) => {
+		if (link.textContent === selectedSubcategory) {
+			link.classList.add("selected");
+		} else {
+			link.classList.remove("selected");
+		}
+	});
+}
+
+function highlightSidebar() {
+	const sidebarMainLinks = document.querySelectorAll(".sidebar .menu-item a");
+	const sidebarSubLinks = document.querySelectorAll(".sidebar .submenu a");
+
+	sidebarMainLinks.forEach((link) => {
+		if (link.getAttribute("data-category") === selectedMainCategory) {
+			link.classList.add("selected");
+		} else {
+			link.classList.remove("selected");
+		}
+	});
+
+	sidebarSubLinks.forEach((link) => {
+		if (link.textContent === selectedSubcategory) {
+			link.classList.add("selected");
+		} else {
+			link.classList.remove("selected");
+		}
+	});
+}
+
+function openMainCategory() {
+	const submenus = document.querySelectorAll(".submenu");
+	const icons = document.querySelectorAll(".toggle-icon");
+
+	submenus.forEach((submenu) => {
+		if (submenu.id.includes(selectedMainCategory)) {
+			submenu.style.display = "block";
+		} else {
+			submenu.style.display = "none";
+		}
+	});
+
+	icons.forEach((icon) => {
+		if (icon.id.includes(selectedMainCategory)) {
+			icon.textContent = "-";
+		} else {
+			icon.textContent = "+";
+		}
+	});
+}
+
+function navigateToSubcategory(event, subcategory) {
 	event.preventDefault();
-	window.location.href = `book-list.html?category=${category}&subcategory=${subcategory}`;
+	if (selectedMainCategory) {
+		selectedSubcategory = subcategory;
+		highlightSubcategory();
+		window.location.href = `book-list.html?category=${selectedMainCategory}&subcategory=${subcategory}`;
+	} else {
+		alert("먼저 메인 카테고리를 선택하세요.");
+	}
 }
