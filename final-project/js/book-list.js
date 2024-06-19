@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+	const mainCategoryLinks = document.querySelectorAll(".main-menu-category .menu-item a");
+	mainCategoryLinks.forEach((link) => {
+		link.addEventListener("mouseover", () => {
+			clearMainCategorySelection();
+			link.classList.add("selected");
+			selectedMainCategory = link.getAttribute("data-category");
+		});
+	});
+
 	const urlParams = new URLSearchParams(window.location.search);
 	const category = urlParams.get("category");
 	const subcategory = urlParams.get("subcategory");
@@ -27,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		loadBooks("all");
 	}
 });
+
+function clearMainCategorySelection() {
+	const mainCategoryLinks = document.querySelectorAll(".main-menu-category .menu-item a");
+	mainCategoryLinks.forEach((link) => {
+		link.classList.remove("selected");
+	});
+}
 
 function toggleSubmenu(id) {
 	const submenu = document.getElementById(id);
@@ -117,6 +133,7 @@ function selectMainCategory(event, category) {
 	selectedSubcategory = null; // 서브카테고리 초기화
 	highlightMainCategory();
 	highlightSubcategory(); // 서브카테고리 하이라이트 초기화
+	highlightSidebar(); // 사이드바 하이라이트 초기화
 }
 
 function highlightMainCategory() {
